@@ -1,0 +1,33 @@
+.navbar-brand {
+	width: 100%;
+	height: auto;
+}
+.nav-link {
+	color: white;
+	background-color: #0047ab;
+	width: 100%;
+}
+.navbar {
+	color: white;
+	position: relative;
+  	margin-bottom: 0px; /* negative value of footer height */
+  	height: 30px;
+  	width: 100%;
+}
+.navbar-nav {
+	color: green;
+}
+.nav-item {
+	color: purple;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  clear:both;
+  padding-top:20px;
+  background-color: #0047ab;
+  color: white;
+  text-align: center;
+}
