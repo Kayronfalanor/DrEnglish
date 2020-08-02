@@ -1,67 +1,390 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Dr.English - Online English Excellence</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="drenglishstyle.css">
-<link rel="shortcut icon" type="image/x-icon" href="drenglish.png">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<title>Dr. English</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- Custom styles for this template -->
+	<!-- <link href="./custom.css" rel="stylesheet"> -->
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+
+		#dr-navbar {
+			background-color:#0047AB;
+		}
+
+	.dr-footer {
+		background-color:#0047AB;
+		color: white;
+		height: 200px;
+		padding-top: 80px;
+	}
+	</style>
+	
+
+
 </head>
-<body>
-
-<div>
-<!--Navbar-->
-<nav class="navbar navbar-expand-lg">
-
-  <!-- Navbar brand -->
-    <div>
-    <!-- Links -->
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dr.English</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">홈
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">학습현황</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">화상영어가이드</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">자주묻는질문</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">묻고답하기</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">원격지원센터</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">회원정보수정</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">수강신청</a>
-        </li>
 
 
-      </ul>
-    </div>
-  </nav>
-</div>
-  <!-- Collapsible content -->
-  <br></br>
-  <div class="row">
-    <img class="imgy1" src="diviuvi.JPG" alt="Carlo Teacher Profile">
-  </div>
-<!--/.Navbar-->
-<br></br>
-<!-- wrap // -->
+<body cz-shortcut-listen="true">
+	<header>
+		<nav id="dr-navbar" class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="#">Dr. English</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-<footer class="footer">GES 에이전트 | 대표 : Ryan Gilbert | 우) 44204 울산광역시 북구 천곡남로 38 (쌍용아진그린타운4차) 410-101 | T. 010-4597-1496
-        <br><br>
-        Copyright ⓒ GES Agent All rights reserved.</footer>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<!-- <li class="nav-item">
+							<a class="nav-link" href="#">Dr.English</a>
+						</li> -->
+					<li class="nav-item active">
+						<a class="nav-link" href="#">홈
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">학습현황</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">화상영어가이드</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">자주묻는질문</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">묻고답하기</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">원격지원센터</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">회원정보수정</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">수강신청</a>
+					</li>
+				</ul>
+
+				<!--  <ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+								Dropdown
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						</li>
+					</ul> -->
+
+				<!-- <form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form> -->
+			</div>
+		</nav>
+	</header>
+
+	<main role="main">
+
+		<section class="jumbotron text-center">
+			<div class="container-fluid">
+				<h1>S E C T I O N - e.g. Teacher Profiles</h1>
+
+
+				<div class="card-deck">
+					<div class="card">
+						<img class="card-img-top" src="https://picsum.photos/id/27/300/300" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Josh Smith</h5>
+							<p class="card-text">- Education - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="card-text">- Experience - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">read more</small>
+						</div>
+					</div>
+
+					<div class="card">
+						<img class="card-img-top" src="https://picsum.photos/id/27/300/300" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Sarah Williams</h5>
+							<p class="card-text">- Education - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="card-text">- Experience - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">read more</small>
+						</div>
+					</div>
+
+					<div class="card">
+						<img class="card-img-top" src="https://picsum.photos/id/27/300/300" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title">Dave Johnson</h5>
+							<p class="card-text">- Education - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="card-text">- Experience - Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">read more</small>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<h1 class='text-center'>C U R R I C U L U M</h1>
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+								preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+								<title>Placeholder</title>
+								<rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+									dy=".3em">Thumbnail</text>
+							</svg>
+							<div class="card-body">
+								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.</p>
+								<div class="d-flex justify-content-between align-items-center">
+									<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+										<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+									</div>
+									<small class="text-muted">9 mins</small>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<footer class="dr-footer">
+		<div class="container">
+			<p>GES 에이전트 | 대표 : Ryan Gilbert | 우) 44204 울산광역시 북구 천곡남로 38 (쌍용아진그린타운4차) 410-101 | T. 010-4597-1496</p>
+		</div>
+	</footer>
+	<script src="Album%20example%20%C2%B7%20Bootstrap_files/jquery-3.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+	<script src="Album%20example%20%C2%B7%20Bootstrap_files/bootstrap.js"
+		integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+		crossorigin="anonymous"></script>
+
 </body>
+
 </html>
