@@ -1,0 +1,5 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+20:14:35	5256/5256	---M-Z	200	added ('OK')	text/html	date:Sun,%2002%20Aug%202020%2002:14:33%20GMT	http://dr-english.com/UserMember/LoginPage.asp	/home/jking/websites/DrEnglish/dr-english.com/UserMember/LoginPage.html	(from )
+20:14:36	1238/1238	---M--	404	error ('Not%20Found')	text/html	date:Sun,%2002%20Aug%202020%2002:14:33%20GMT	http://dr-english.com/robots.txt		(from )
+20:14:36	40396/40396	---M-Z	200	added ('OK')	text/html	date:Sun,%2002%20Aug%202020%2002:14:34%20GMT	http://dr-english.com/UserMember/UserRegistCheck.asp	/home/jking/websites/DrEnglish/dr-english.com/UserMember/UserRegistCheck.html	(from http://dr-english.com/UserMember/LoginPage.asp)
+20:14:37	131/131	---M-Z	200	added ('OK')	text/html	date:Sun,%2002%20Aug%202020%2002:14:34%20GMT	http://dr-english.com/UserMember/UserRegist.asp	/home/jking/websites/DrEnglish/dr-english.com/UserMember/UserRegist.html	(from http://dr-english.com/UserMember/UserRegistCheck.asp)
