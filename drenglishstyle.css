@@ -1,25 +1,25 @@
-.navbar-brand {
+/* .navbar-brand {
 	width: 100%;
 	height: auto;
-}
-.nav-link {
+} */
+.nav-link {	
 	color: white;
-	background-color: #0047ab;
-	width: 100%;
+	border-radius: 10px 0 10px 0;
+
+}
+.nav-link:hover{
+	color:#0047ab;
+	background-color: white;
 }
 .navbar {
-	color: white;
-	position: relative;
-  	margin-bottom: 0px; /* negative value of footer height */
-  	height: 30px;
-  	width: 100%;
+	background-color:#0047ab;
+	color:white;
+  	/* margin-bottom: 0px; negative value of footer height */
+  	/* height: 30px; */
 }
-.navbar-nav {
-	color: green;
-}
-.nav-item {
-	color: purple;
-}
+
+
+
 .footer {
   position: fixed;
   left: 0;
@@ -30,4 +30,64 @@
   background-color: #0047ab;
   color: white;
   text-align: center;
+}
+
+/* Profile section  */
+.profile {
+	margin: 100px auto;
+}
+.profile-articles {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-evenly;
+}
+.profile-article{
+	background-color: #094C99;
+	margin: 10px;
+	width: 30%;
+	height: 500px;
+	border-radius: 2rem 0 2rem 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+.profile-article:hover{
+	box-shadow: inset 0 0 1rem 1rem #03346D;
+
+
+}
+.profile-header{
+	display:flex;
+	padding: 1rem 2rem;
+	color: #fff;
+	align-items: center;
+}
+.profile-header img{
+	border-radius: 50%;
+	border: 5px solid #fff;
+	width: 100px;
+	height: 100px;
+}
+.profile-header h3{
+	margin-left: 20px;
+	font-weight: bold;
+
+}
+.profile-text {
+	background-color: #fff;
+	border-radius: 15% 0 15% 0;
+	margin: 10px;
+	padding: 1.2rem 2rem;
+}
+
+.profile-text h6{
+	font-weight: bold;
+}
+.profile-text li{
+	font-size: 0.8rem;
+}
+.profile-text li p {
+	margin-bottom:0;
+}
+
+.profile-3 .profile-text li {
+	font-size: .7rem;
 }
