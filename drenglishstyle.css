@@ -1,25 +1,25 @@
-.navbar-brand {
+/* .navbar-brand {
 	width: 100%;
 	height: auto;
-}
-.nav-link {
+} */
+.nav-link {	
 	color: white;
-	background-color: #0047ab;
-	width: 100%;
+	border-radius: 10px 0 10px 0;
+
+}
+.nav-link:hover{
+	color:#0047ab;
+	background-color: white;
 }
 .navbar {
-	color: white;
-	position: relative;
-  	margin-bottom: 0px; /* negative value of footer height */
-  	height: 30px;
-  	width: 100%;
+	background-color:#0047ab;
+	color:white;
+  	/* margin-bottom: 0px; negative value of footer height */
+  	/* height: 30px; */
 }
-.navbar-nav {
-	color: green;
-}
-.nav-item {
-	color: purple;
-}
+
+
+
 .footer {
   position: fixed;
   left: 0;
