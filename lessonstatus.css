@@ -1,0 +1,61 @@
+/* Custom CSS for lesson status page */
+
+.profilenstatus{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+.profile-display{
+    display: flex;
+    flex-flow: wrap;
+    background-color: rgb(0, 71, 171);
+    width: 300px;
+    height: 500px;
+    padding: 20px 40px;
+}
+.profile-display img{
+    display: flex;
+    border-radius: 50%;
+    border: 3px solid rgb(38,109,130);
+    width: 220px;
+    height: 220px;
+}
+.profiletxt{
+    display: flex;
+    color: white;
+}
+.status{
+    width:75%;
+}
+
+.status table{
+    text-align: center;
+    border: 3px solid rgb(0,64,151);
+    background-color: rgb(0,64,151);
+}
+.status table .schedule:hover{
+    background-color: rgb(0,75,223);
+}
+.status table .progress:hover{
+    background-color: rgb(0,75,223);
+}
+.status table .report:hover{
+    background-color: rgb(0,75,223);
+}
+.reportbx{
+    background-color: rgb(237,239,242);
+}
+.scheduletr .progresstr .reporttr{
+    visibility: hidden;
+}
+.strtbtn{
+    width: 100px;
+}
+.swapbtn{
+    width: 60px;
+}
+.calendar img{
+    width: 80%;
+    margin: auto;
+}
+

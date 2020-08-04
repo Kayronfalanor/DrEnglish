@@ -1,0 +1,156 @@
+<head>
+<style>
+.sub_tmenu{overflow:hidden;position:relative;z-index:10; padding-right:1px;background:#4f5c74;}
+.sub_tmenu ul{display:table;*overflow:hidden;width:100%;font-size:12px; table-layout:fixed}
+.sub_tmenu li{display:table-cell;*display:inline-block;*float:left;width:auto;*width:33.1%;height:44px;text-align:center; padding:1px 0 1px 1px;}
+.sub_tmenu li.cell{width: 168px}
+.sub_tmenu li a{display:block;width:100%;padding:14px 0;background-color:#606e89;color:#fff;text-decoration:none}
+.sub_tmenu li.on a{background-color:#525f78}
+.sub_tmenu li a span{display:inline-block;overflow:hidden;height:16px;background:url(../../../../img/service/front/order/common_img/sp_tmenu.png?20200423) no-repeat;line-height:9999px; vertical-align:top}
+.sub_tmenu li a.t1_1 span{width:25px;background-position:0 0}
+.sub_tmenu li a.t1_2 span{width:38px;background-position:0 -20px}
+.sub_tmenu li a.t1_3 span{width:96px;background-position:0 -40px}
+.sub_tmenu li a.t1_4 span{width:52px;background-position:0 -280px}
+.sub_tmenu li a.t1_5 span{width:44px;background-position:0 -340px}
+.sub_tmenu li.on a.t1_1 span{background-position:-150px 0}
+.sub_tmenu li.on a.t1_2 span{background-position:-150px -20px}
+.sub_tmenu li.on a.t1_3 span{background-position:-150px -40px}
+.sub_tmenu li.on a.t1_4 span{background-position:-150px -280px}
+.sub_tmenu li.on a.t1_5 span{background-position:-150px -340px}
+    .spot li .inner .ico,
+.spot li .inner dt,
+.com_num em,
+.spot .zzim_area .text,
+.spot .zzim_area .link_shoppingmy,
+.ly_tp1 .edge,
+.ly_tp1 .clse{background:url(../../../../img/service/front/order/common_img/sp_spot.png?20200615) no-repeat}
+.spot{position:relative;z-index:30;margin-top:-1px;padding-right:336px;border:1px solid #dadddf;background-color:#edeff2}
+.spot .spot_area{position:relative;border-right:1px solid #d9dadd;padding:41px 5px 67px 40px;}
+.spot ul{*display:inline;*overflow:hidden;zoom:1}
+.spot ul:after{display:block;clear:both;content:''}
+.spot li{*display:inline;float:left;position:relative;width:150px;zoom:1}
+.spot li .inner{position:relative;min-height:83px;padding-left:72px}
+.spot li .inner .ico{display:inline-block;position:absolute;left:0;bottom:0;width:60px;height:60px}
+.spot li.ship1 .inner .ico{background-position:0 0}
+.spot li.ship2 .inner .ico{background-position:-70px 0}
+.spot li.ship3 .inner .ico{background-position:-140px 0}
+.spot li .inner dl{}
+.spot li .inner dt{overflow:hidden;height:13px;margin-left:-62px;line-height:9999px}
+.spot li.ship1 .inner dt{width:36px;background-position:0 -70px}
+.spot li.ship2 .inner dt{width:48px;background-position:-80px -70px}
+.spot li.ship3 .inner dt{width:81px;background-position:-150px -70px}
+.spot li .inner dd{margin-top:10px;padding:15px 0 14px}
+.spot .zzim_area{position:absolute;bottom:14px;right:17px;}
+.spot .zzim_area .text{display:inline-block;vertical-align:top;width:224px;height:18px;background-position:0 -210px}
+.spot .zzim_area .link_shoppingmy{display:inline-block;margin-left:6px;vertical-align:top;width:56px;height:18px;background-position:-100px -190px}
+.spot .side_banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.spot .side_banner a {
+    display: block;
+}
+.spot .side_banner img {
+    width: 336px;
+    height: 192px;
+    vertical-align: top;
+}
+</style>
+</head>
+<body>
+<div class="sub_tmenu">
+	<ul>
+		<li class="on"><a href="https://order.pay.naver.com/home?tabMenu=SHOPPING" class="t1_1"><span>쇼핑</span></a></li><!--N=a:snb.shopping-->
+		<li><a href="https://order.pay.naver.com/home?tabMenu=DIGITAL" class="t1_2"><span>콘텐츠</span></a></li><!--N=a:snb.contents-->
+		<li><a href="https://pay.naver.com/send/p/offline/list" class="t1_5"><span>QR결제</span></a></li><!--N=a:snb.qrpay-->
+		<li class="cell "><a href="https://order.pay.naver.com/home?tabMenu=BOOKING" class="t1_3"><span>예약</span></a></li><!--N=a:snb.reservation-->
+		<li><a href="https://pay.naver.com/send/p/card/list" class="t1_4"><span>제휴카드</span></a></li><!--N=a:snb.card-->
+	</ul>
+</div>
+<div class="spot _summaryRoot">
+<div class="spot_area">
+<ul>
+<li class="ship1 ">
+	<div class="inner">
+		<span class="ico"></span>
+		<dl>
+		<dt>배송중/완료</dt>
+		<dd class="com_num _beforeDelivery"><em class="num0">0</em></dd>
+		</dl>
+	</div>
+	<a href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="com_link _beforeDeliveryBtn _mouseover(nmp.front.order.timeline.home.summary.showLayer(BEFORE_DELIVERY)) _click(nmp.front.order.timeline.home.summary.showSummaryList(BEFORE_DELIVERY)) _stopDefault" style="display: none;">현황보기</a><!--N=a:top:pay-->
+</li>
+<li class="ship2 ">
+	<div class="inner">
+		<span class="ico"></span>
+		<dl>
+		<dt>배송중/완료</dt>
+		<dd class="com_num _afterDelivery"><em class="num0">0</em></dd>
+		</dl>
+	</div>
+	<a href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="com_link _afterDeliveryBtn _mouseover(nmp.front.order.timeline.home.summary.showLayer(AFTER_DELIVERY)) _click(nmp.front.order.timeline.home.summary.showSummaryList(AFTER_DELIVERY)) _stopDefault" style="display: none;">현황보기</a><!--N=a:top:delivery-->
+</li>
+<li class="ship3 ">
+	<div class="inner">
+		<span class="ico"></span>
+		<dl>
+		<dt>취소/반품/교환</dt>
+		<dd class="com_num _inClaim"><em class="num0">0</em></dd>
+		</dl>
+	</div>
+	<a href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="com_link _inClaimBtn _mouseover(nmp.front.order.timeline.home.summary.showLayer(IN_CLAIM)) _click(nmp.front.order.timeline.home.summary.showSummaryList(IN_CLAIM)) _stopDefault" style="display: none;">현황보기</a><!--N=a:top:claim-->
+</li>
+</ul>
+
+<!-- [D] 배송전 edge left위치값 : 83px, 배송후 edge left위치값 : 203px, 반품진행중 edge right 위치값 : 82px -->
+<div class="ly_tp1 _beforeDeliveryLayer" style="display:none">
+	<span class="edge" style="left:83px"></span>
+	<div class="ly_inr"><ul></ul></div>
+	<!--a href="#" class="clse _click(nmp.front.order.timeline.home.summary.closeLayer()) _stopDefault">닫기</a-->
+</div>
+<div class="ly_tp1 _afterDeliveryLayer" style="display:none">
+	<span class="edge" style="left:203px"></span>
+	<div class="ly_inr"><ul></ul></div>
+	<!--a href="#" class="clse _click(nmp.front.order.timeline.home.summary.closeLayer()) _stopDefault">닫기</a-->
+</div>
+<div class="ly_tp1 _inClaimLayer" style="display:none">
+	<span class="edge" style="right:82px"></span>
+	<div class="ly_inr"><ul></ul></div>
+	<!--a href="#" class="clse _click(nmp.front.order.timeline.home.summary.closeLayer()) _stopDefault">닫기</a-->
+</div>
+	<p class="zzim_area">
+		<span class="text"><span class="blind">찜한 상품 리뷰는 쇼핑MY에서 확인하세요.</span></span><a href="https://shopping.naver.com/my/p/zzim/index.nhn" class="link_shoppingmy"><span class="blind">쇼핑MY</span></a>
+	</p>
+</div>
+
+<div class="side_banner">
+	<a href="https://m-campaign.naver.com/collect/?code=npa_pc&amp;target=https://event2.pay.naver.com/event/benefit/list" class="banner_link" style="background-color: ">
+		<img src="./네이버페이_files/PC_336x192_1.png" width="336" height="192">
+	</a><!--N=a:top.banner-->
+</div>
+</div>
+<div class="_listRoot">
+	<div class="ask_sc">
+<table cellpadding="0" cellspacing="0" border="0" class="terms">
+<colgroup><col><col width="243"><col width="110"><col width="86">
+</colgroup><tbody>
+<tr>
+<td>
+    <div class="month_area">
+		<ul class="month_list">
+				<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi0"><a id="_rangeQuickSelectorA0" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(0)) _stopDefault">3월</a> <!--N=a:top.6m--></li>
+		<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi1"><a id="_rangeQuickSelectorA1" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(1)) _stopDefault">4월</a> <!--N=a:top.5m--></li>
+		<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi2"><a id="_rangeQuickSelectorA2" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(2)) _stopDefault">5월</a> <!--N=a:top.4m--></li>
+		<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi3"><a id="_rangeQuickSelectorA3" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(3)) _stopDefault">6월</a> <!--N=a:top.3m--></li>
+		<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi4"><a id="_rangeQuickSelectorA4" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(4)) _stopDefault">7월</a> <!--N=a:top.2m--></li>
+		<li class="_rangeQuickSelectorLi" id="_rangeQuickSelectorLi5"><a id="_rangeQuickSelectorA5" href="https://order.pay.naver.com/home?tabMenu=SHOPPING#" class="_click(nmp.front.order.timeline.home.list.date.clickRangeQuickSelector(5)) _stopDefault">8월</a> <!--N=a:top.1m--></li>
+		</ul>
+	</div>
+    </td>
+    </tr>
+    </tbody>
+        </table>
+    </div>
+    </div>
+    </body>
