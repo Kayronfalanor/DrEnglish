@@ -56,12 +56,12 @@ main {
 	background-color:var(--main-blue);
 	color: white;
 
-	position: fixed;
+/*	position: fixed;*/ /*This is what caused the footer to be stuck to the bottom of the viewport */
   left: 0;
   bottom: 0;
   width: 100%;
   clear:both;
-  padding-top:20px;
+  padding:20px;
   text-align: center;
 }
 
