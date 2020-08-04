@@ -1,0 +1,221 @@
+body{font-family: 'NanumSquare', sans-serif !important;}
+ul,li{list-style: none;}
+*{margin:0;padding:0;}
+.contents_right{width:750px; float:left;border:0px solid red; margin-left: 20px; margin-top: 40px;}
+.contents_right2{width:840px; float:left;border:0px solid red; margin-left: 20px;margin-bottom: 20px; }
+.contents_right3{float:left;border:0px solid red; margin-left: 20px;margin-bottom: 20px; }
+#container{width:1000px;margin:0 auto; border:0px solid #000;}
+#leftmenubox{width:180px;border:0px solid blue; float: left;}
+
+/*nav*/
+.leftwrap ul a{display: block; text-decoration: none; color:#282828;}
+.leftwrap ul a li{width:93%; height:40px; line-height: 40px; padding:3px 0 3px 15px; border-bottom: 1px solid #c6c6c6; }
+.leftwrap ul a li:hover{background-color: #3d3d3d;color:#ffa800;}
+.click_active{background-color: #3d3d3d;color:#ffa800;}
+.menu_hover{background-color: #3d3d3d;color:#ffa800;}
+
+/* link */
+	
+	a:link {font-family: "NanumSquare", "굴림체";  text-decoration:none; }
+	a:visited {font-family: "NanumSquare", "굴림체";  text-decoration:none; }
+	a:hover {font-family: "NanumSquare", "굴림체";  text-decoration:none; }
+	a:active {font-family: "NanumSquare", "굴림체"; text-decoration:none; }
+
+/*학습현황*/
+.text_list_common{margin-top: 20px; font-size: 14px; height:10px;}
+.text_list{margin-top: 20px; font-size: 14px; height:50px;}
+.text_style1{float: left;}
+.text_style2{float: left; cursor: pointer; margin-top: -15px;}
+.text_style3{float: left;  margin-top: 15px;}
+.text_style4{float: left; cursor: pointer;}
+.text_style5{float: left;margin-top: -15px;}
+.usetalking_start_btn{position: relative; top:15px;}
+
+table.type07 {
+	margin-top: 20px;
+	font-size: 14px;
+	width:100%;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+}
+
+table.type07 tbody th {
+	font-weight: 400;
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+table.type07 td {
+    
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+}
+
+table.type07none {
+	font-size: 14px;
+	width:100%;
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+}
+
+table.type07none tbody th {
+	font-weight: 400;
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+table.type07none td {
+    
+    padding: 0px;
+    vertical-align: middle;
+    border-bottom: 0px ;
+}
+ 
+table.mypage_tablelist {
+	margin-top: 20px;
+	font-size: 14px;
+	width:100%;
+    border-collapse: collapse;
+    text-align: center;
+    line-height: 1.5;
+	border-top: 1px solid #ccc;
+}
+table.mypage_tablelist tbody th {
+	font-weight: 600;
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+table.mypage_tablelist td {
+    
+    padding: 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+table.my_study_ing {
+	font-size: 14px;
+	width:100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+table.my_study_ing tbody th {
+	font-weight: 400;
+    padding: 5px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+table.my_study_ing td {
+    
+    padding: 5px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ccc;
+}
+
+/*달력*/
+
+.clander_text1{font-size: 12px;color:#ff3f3f;}
+.clander_text2{font-size: 12px;color:#000}
+.clander_text3{font-size: 12px;color:#8d8d8d;}
+.clander_text4{font-size: 12px;color:#3eb100;}
+
+/**원격지원센터**/
+.selectstyle{padding:5px 8px; }
+.won_gobtn{font-size: 16px; cursor: pointer;display: block;height:50px;padding:0px 20px;margin:30px auto; border:none; background-color: #ffa800;color:#fff;box-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+
+
+/*화상영어가이드*/
+
+.tab_ul li {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.tab_ul {border-bottom: 1px solid #3d3d3d;
+  padding: 0;
+}
+.tab_a, .tab_a:visited, .tab_a:active, .tab_a:hover { color: #3d3d3d;text-decoration: none; font-size: 14px;}
+
+.tabscroll_activeNavi {
+  background-color: #3d3d3d;
+  border-width: 5px 0 0 0;
+  border-color:#ffa800;
+  border-style: solid
+}
+
+.tabscroll_activeNavi a, .tabscroll_activeNavi a:visited, .tabscroll_activeNavi a:active, .tabscroll_activeNavi a:hover {color:#ffa800; }
+
+article {
+  margin: 0;
+  padding: 0;
+  border-width: 0 2px 2px 2px;
+  border:none;
+}
+
+/*묻고답하기*/
+
+/*자주묻는질문*/
+
+
+
+
+.agree_txt{ 
+	overflow:scroll; 
+	margin:0px; 
+	font-family: "돋움"; 
+	font-size: 12pt;  
+	line-height: 160%; }	
+
+
+	
+/* scrollbar */
+	.scroll {
+    SCROLLBAR-FACE-COLOR: #ededed; 
+    FONT-SIZE: 10pt; 
+    SCROLLBAR-HIGHLIGHT-COLOR: #fafafa; 
+    SCROLLBAR-SHADOW-COLOR: #bdbdbd; 
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+    SCROLLBAR-ARROW-COLOR: #89a0bc; 
+    SCROLLBAR-TRACK-COLOR: #F7FFFF; 
+    FONT-FAMILY: 굴림;
+	line-height: 150%;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+	 }
+	
+	#scrollbox_common { height:350px; overflow:auto; padding:10px; border:#CCCCCC 1px solid;}
+	#scrollbox { height:350px; overflow:auto; padding:10px; border:0; border-style:solid; border-color:#000;}
+	#scrollbox td tr{  margin:0px; font-family: "돋움"; font-size: 10pt;  line-height: 150%;}
+	.scroll.title{  margin:0px; font-family: "돋움"; font-size: 12pt;  line-height: 270%;color: #red;}
+	
+	/* scrollbar */
+	.scroll2 {
+    SCROLLBAR-FACE-COLOR: #ededed; 
+    FONT-SIZE: 9pt; 
+    SCROLLBAR-HIGHLIGHT-COLOR: #fafafa; 
+    SCROLLBAR-SHADOW-COLOR: #bdbdbd; 
+    SCROLLBAR-3DLIGHT-COLOR: #ffffff; 
+    SCROLLBAR-ARROW-COLOR: #89a0bc; 
+    SCROLLBAR-TRACK-COLOR: #F7FFFF; 
+    FONT-FAMILY: 굴림;
+	line-height: 150%;
+    SCROLLBAR-DARKSHADOW-COLOR: #ffffff; 
+	 }
+	
+	#scrollbox2 { height:200px; overflow:auto; padding:10px; border:0; border-style:solid; border-color:black;}
+	#scrollbox2 td tr{  margin:0px; font-family: "돋움"; font-size: 8pt;  line-height: 150%;}
+	.scroll.title{  margin:0px; font-family: "돋움"; font-size: 11pt;  line-height: 270%;color: #red;}
+	
+
+	.cssregBtns{font-size: 16px; cursor: pointer;display: block;height:30px;padding:0px 20px; border:none; background-color: #ffa800;color:#fff;box-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+	.regist_cancelbtn{font-size: 16px; cursor: pointer;display: block;height:40px;padding:0px 20px;margin:30px auto; border:none; background-color: #efefef;color:#fff;box-shadow: 2px 2px 2px rgba(0,0,0,0.2);}
+
+

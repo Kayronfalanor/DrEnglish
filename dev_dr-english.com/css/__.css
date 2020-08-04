@@ -1,0 +1,110 @@
+﻿@import url("subcss02.css");
+
+body {
+    font-size: 12px;
+	margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px;
+	background-image:url('/img/newx/top_bg.png');
+	background-repeat:repeat-x;
+	margin:0pt auto;
+}
+ul {
+    padding-left: 10px;
+}
+li {
+    list-style: none;
+}
+.spotbt {
+	position:absolute;
+	margin-left: 65px;
+	margin-top: 10px;
+}
+.login {
+	margin-top: 100px;
+}
+
+.login2 {
+	width: 255px;
+	height: 119px;
+	background-image:url('/img/newx/login_bg.png');
+}
+
+.side {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.spot {
+	margin-top: 30px;
+	width: 713px;
+	height: 272px;
+	background-image:url('/img/newx/spot.png');
+}
+
+.spottext {
+	position:absolute;
+	margin-left: 25px;
+	margin-top: 0px;
+}
+
+.spotmenu {
+	position:absolute;
+	margin-left: 49px;
+	margin-top: 112px;
+}
+
+.wraper {
+    width: 964px;
+	margin:0pt auto;
+	position:relative;
+}
+.navigation {
+    float: left;
+    width: 255px;
+}
+.content {
+    float: right;
+    width: 709px;
+}
+.contentleft {
+    float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+    width: 300px;
+	margin-bottom: 35px;
+}
+.contentright {
+    float: right;
+	margin-top: 25px;
+	margin-right: 25px;
+    width: 300px;
+	margin-bottom: 35px;
+}
+.dialmenutitle {
+	margin-left: 520px;
+}
+.dialmenu {
+	clear: both;
+	position:relative;
+	width: 649px;
+	margin-bottom: 30px;
+	margin-left: 35px;
+}
+.style9 {
+	line-height:180%;
+
+}
+
+IMG {border:0;}
+
+#memid {
+	WIDTH: 111px; FONT-FAMILY: , , verdana; HEIGHT: 17px; COLOR:#515151; FONT-SIZE: 12px
+}
+#password {
+	WIDTH: 111px; FONT-FAMILY: , , verdana; HEIGHT: 17px; COLOR: #515151; FONT-SIZE: 12px
+}
+
+A.roll img { display:inline; border:0;}
+A.roll img.over { display:none; }
+A.roll:hover { border:0; }
+A.roll:hover img { display:none; }
+A.roll:hover img.over { display:inline; }

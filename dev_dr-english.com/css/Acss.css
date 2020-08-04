@@ -1,0 +1,75 @@
+A:link
+{
+COLOR: #555555;
+FONT-FAMILY: ±¼¸²;
+FONT-SIZE: 9pt;
+TEXT-DECORATION: none
+}
+A:visited
+{
+COLOR: #555555;
+FONT-FAMILY: ±¼¸²;
+FONT-SIZE: 9pt;
+TEXT-DECORATION: none
+}
+
+A:hover
+{
+COLOR: #3399ff;
+FONT-FAMILY: ±¼¸²;
+FONT-SIZE: 9pt;
+TEXT-DECORATION: underline
+}
+
+A:active
+{
+COLOR: #3399ff;
+FONT-FAMILY: ±¼¸²;
+FONT-SIZE: 9pt;
+TEXT-DECORATION: underline
+}
+
+
+
+/*input {font-size: 9pt; color:#555555; border:1 solid #cccccc;}*/
+select {font-size: 11px; color:#555555; border:1 solid #cccccc;}
+
+TEXTAREA {
+	 font-size:9pt;COLOR: #6b6b6b; FONT-FAMILY: ±¼¸², seoul, arial, helvetica;line-height:150%; background-image:  url();        
+border-width:1px; border-color:#CCCCCC;BORDER-LEFT: #CCCCCC 1px solid;BORDER-TOP: #CCCCCC 1px solid; PADDING-LEFT: 5px; PADDING-TOP: 4px; }
+}
+
+.box1 {font-size: 9pt; color:#555555; border:0;}
+
+.box2 {font-size: 9pt; color:#555555; border:1 solid #ededed;}
+
+.textarea2 {
+  background-color:#f9f9f9; border:1px solid #cccccc;font-size:9pt; color:#666666;
+  scrollbar-face-color:#f0f0f0;
+  scrollbar-shadow-color:#9C9C9C;
+  scrollbar-highlight-color:#ffffff;
+  scrollbar-3dlight-color:#9C9C9C;
+  scrollbar-darkshadow-color:#ffffff;
+  scrollbar-base-color:#ffffff;
+  scrollbar-arrow-color:#DCDCDC
+}
+
+.f10 { font-size: 10pt}
+.f8 { font-size: 8pt}
+.LH { line-height:18px}
+
+
+td { font-size: 9pt; color: #555555 ;}
+
+/* Create By Waitplz */
+.spnBtn1 {clear:both; display:inline-block; padding:3px 6px; color:#666666; background:#D8C5A7; /*#987f70;*/ cursor:pointer;}
+.spnBtn2 {clear:both; display:inline-block; padding:3px 6px; color:#FFFFFF; background:#0066CC; cursor:pointer;}
+
+.wTable{width:100%; table-layout:fixed; border-collapse:collapse; border-top:2px solid #555; border-bottom:2px solid #555; color:#434343;}
+	.wTable th{background:#f4f4f4; font-weight:bold; text-align:center;}
+	.wTable tr th, .wTable tr td{padding:5px 0 6px 0; border-bottom:1px solid #e7e7e7;}
+	.wTable .last th, .wTable .last td{border-bottom:none;}
+	.wTable tr .noborder{border-bottom:none;}
+	.wTable tr td.left{padding-left:11px; text-align:left;}
+	.wTable tr td span.arrowUp{font-weight:bold; color:#79ab02;}
+	.wTable tr td span.arrowDown{font-weight:bold; color:#CC3333;}

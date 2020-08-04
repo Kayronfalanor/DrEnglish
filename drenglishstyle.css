@@ -16,8 +16,25 @@
 
 /* Profile section (Simon)  */
 .profile {
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  clear:both;
+  padding-top:20px;
+  background-color: #0047ab;
+  color: white;
+  text-align: center;
+}
+
+.section {
 	margin: 100px auto;
 }
+
+/* Profile section  */
+
 .profile-articles {
 	display: flex;
 	flex-flow: wrap;
@@ -71,7 +88,6 @@
 
 /* end of teacher profiles */
 
-
 .readmore {
 	color: #dacece;
 }
@@ -79,4 +95,108 @@
 	color: white;
 }
 
+ /* CERF  */
+ .level-title{
+	text-align: center;
+	padding: 2rem;
+	font-family: 'Ubuntu', sans-serif;
+ }
+ .table-wrapper{
+	width : 70%;
+	margin: 0 auto;
+ } 
+ .table-thread{
+	background-color: #26a7e1;
+	color:#fff;
+	border-bottom: .5rem solid #fff;
+}
+ tbody th{
+	 background-color: #d7e8f2;
+	 color:#0e366d;
+	 font-weight: bold;
+ }
+ 
+td{
+	background-color: #e6eff6;
+}
+th, tr, td{
+	border: .3rem solid #fff;
+	border-radius: 1rem;
+	text-align: center;	
+}
+ .th-1 {
+	 width: 20%;
+ }
+ 
+ .th-2 {
+	width: 10%;
+}
+ .th-3 {
+	 width: 70%;
+ }
 
+ .level-explain{
+	 text-align: left;
+	 background-color: #e8e8e8;
+ }
+
+/* CEO Message */
+.ceo-msg{
+	font-family: 'Ubuntu', sans-serif;
+}
+.ceo-msg header{
+	background: url("https://cdn.pixabay.com/photo/2020/01/22/09/40/teacher-4784917_1280.jpg") no-repeat;
+	height: 70vh;
+	background-size : cover;
+}
+.ceo-msg-wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+.ceo-title {
+	padding: 2rem;
+	background-color:  #26a7e1;
+	color: #fff;
+	margin-top: 2rem;
+	margin-bottom: 3rem;
+	margin-right: 0;
+	margin-left: 7rem;
+	display: inline-block;
+
+}
+.ceo-msg-text{
+	line-height: 2rem;
+	text-align: justify;
+	
+}
+.ceo-msg-text span{
+	font-weight: bold;
+	font-size: 1.2rem;
+
+}
+.ceo-msg-text h6{
+	margin: 1rem;
+	margin-right: 0;
+	text-align: right;
+}
+
+.ceo-msg-img img{
+	border-radius: 50%;
+	border: 1rem solid #e8e8e8;
+	float: left;
+	margin: 3rem 5rem 3rem 3rem;
+}
+
+@media ( max-width : 1390px) {
+	.ceo-msg-img img {
+		float: none;
+		display: block;
+		margin: 2rem auto;
+	}
+
+	.ceo-msg-text {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
