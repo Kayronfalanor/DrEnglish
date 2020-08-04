@@ -1,6 +1,9 @@
 .nav-link {	
 	color: white;
 	border-radius: 10px 0 10px 0;
+	font-size: 14pt;
+	font-weight: bold;
+	margin-top: 25px;
 
 }
 .nav-link:hover{
@@ -12,6 +15,10 @@
 	color:white;
   	/* margin-bottom: 0px; negative value of footer height */
   	/* height: 30px; */
+}
+#nav-logo {
+	
+	margin: -10px;
 }
 
 /* Profile section (Simon)  */
