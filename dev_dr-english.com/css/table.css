@@ -1,0 +1,93 @@
+/* CSS Document */
+
+
+/* txt */	
+
+	.login_txt{color:#CCCCCC;letter-spacing:-0.5px;}
+	
+	.point{color:#1189e6;
+	font-family: "Arial", "ü"; 
+	font-size: 9pt; 
+	letter-spacing:-0.5px; 
+	font-weight:bold;
+	}
+	.point02{
+	color: #F26C4F;}
+	
+	.point03{
+	color: #40a4d7;
+	font-weight:bold;
+	letter-spacing:-1px;
+	font-size:0.9em;
+	font-family: "Arial", ""; }
+	
+	.agree_txt{ 
+	overflow:scroll; 
+	margin:0px; 
+	font-family: ""; 
+	font-size: 11pt;  
+	line-height: 160%; }	
+
+	
+
+/* table */	
+	
+	table.s6_style01{
+	height:30px;
+	letter-spacing:-0.5px;
+	border:1px solid #7BBFF0;
+	}
+		
+	table.s6_style01 th{
+	background-color:#eff6fb;
+	height:30px;
+	color:#0073cc;
+	text-align:center;
+	}
+	
+	table.s6_style01 .line_r{border-right:1px solid #7BBFF0;}
+	
+	
+	table.s6_style01 td{
+	text-align:center;
+	padding-left:7px;
+	}
+	
+	table.s6_style01 .line_bot{
+	border-bottom:1px solid #7BBFF0;
+	}
+	
+	table.s6_style01 .line_bot02{
+	border-bottom:1px solid #7BBFF0;
+	border-left:1px solid #7BBFF0;
+	}
+
+	table.s6_style01 .line_bot03{
+	
+	border-left:1px solid #7BBFF0;
+	}	
+	
+	table.s6_style01 .line_bot04{
+	border-bottom:1px solid #7BBFF0;
+	border-left:1px solid #7BBFF0;
+	color:#5e5e5e;
+	font-size:12px;
+	}
+	
+	table.t_style02{
+	height:30px;
+	text-align:left;
+	letter-spacing:-0.5px;
+	}
+	
+	table.t_style02 th{
+	background-color:#eff6fb;
+	height:30px;
+	text-align:left;
+	padding-left:17px;
+	
+	}
+	table.t_style02 td{
+	padding-left:2px;
+	}
+	

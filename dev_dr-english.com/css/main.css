@@ -1,0 +1,126 @@
+﻿
+
+.spotbt {
+	position:absolute;
+	margin-left: 65px;
+	margin-top: 10px;
+}
+.login {
+	margin-top: 100px;
+}
+
+.login2 {
+	width: 255px;
+	height: 119px;
+	background-image:url('/img/newx/login_bg.png');
+}
+
+.side {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.spot {
+	margin-top: 30px;
+	width: 713px;
+	height: 272px;
+	background-image:url('/img/newx/spot.png');
+}
+
+.spottext {
+	position:absolute;
+	margin-left: 25px;
+	margin-top: 0px;
+}
+
+.spotmenu {
+	position:absolute;
+	margin-left: 49px;
+	margin-top: 112px;
+}
+
+.wraper {
+    width: 964px;
+	margin:0pt auto;
+	position:relative;
+}
+.navigation {
+    float: left;
+    width: 255px;
+}
+.content {
+    float: right;
+    width: 709px;
+}
+.contentleft {
+    float: left;
+	margin-top: 25px;
+	margin-left: 25px;
+    width: 300px;
+	margin-bottom: 35px;
+}
+.contentright {
+    float: right;
+	margin-top: 25px;
+	margin-right: 25px;
+    width: 300px;
+	margin-bottom: 35px;
+}
+.dialmenutitle {
+	margin-left: 520px;
+}
+.dialmenu {
+	clear: both;
+	position:relative;
+	width: 649px;
+	margin-bottom: 30px;
+	margin-left: 35px;
+}
+.style9 {
+	line-height:180%;
+
+}
+
+IMG {border:0;}
+
+#memid {
+	WIDTH: 111px; FONT-FAMILY: , , verdana; HEIGHT: 17px; COLOR:#515151; FONT-SIZE: 12px
+}
+#password {
+	WIDTH: 111px; FONT-FAMILY: , , verdana; HEIGHT: 17px; COLOR: #515151; FONT-SIZE: 12px
+}
+
+A.roll img { display:inline; border:0;}
+A.roll img.over { display:none; }
+A.roll:hover { border:0; }
+A.roll:hover img { display:none; }
+A.roll:hover img.over { display:inline; }
+
+
+#navArea{width:677px; height:35px; clear:both; margin-top:-30px; /* background:green; */ background:url(/img/navbg.gif) no-repeat;}
+#navArea td{text-align:center; width:166px;}
+#navArea td a{display:block; font-size:16px; width:166px; padding-top:2px; /* line-height:34px; */ text-align:center; font-weight:bold; color:black;  text-decoration:none; font-family:NanumGothic,Malgun Gothic,"돋음";}
+
+.sub{background:#205589;  height:33px; border-top:1px solid #8faac5;/* width:676px; */}
+.sub td img{padding:0 10px;}
+.sub td a{/* background:red;*/ font-size:12px; color:white; line-height:30px; font-weight:bold; text-decoration:none; font-family:NanumGothic,Malgun Gothic,"돋음";}
+
+#sub1_1{}
+#sub2_2{display:none;}
+#sub3_3{display:none;}
+#sub4_4{display:none;}
+
+.text1{COLOR:white; } 
+.text2{COLOR:#98cd34; } 
+
+
+/* 비디오 가이드 */
+.videoguide_menu {width:700px}
+.videoguide_menu ul li {float: left; width: 115px; background-color: #999999; border-radius: 15px 15px 0px 0px; margin-left:2px; height: 35px; text-align: center;}
+.videoguide_menu ul li.on{float: left; width: 115px; background-color: #1e9dd8; border-radius: 15px 15px 0px 0px; margin-left:2px; height: 35px; text-align: center;}
+.videoguide_menu ul li:first-child,
+.videoguide_menu ul li:first-child.on{margin-left: 0px;}
+.videoguide_menu ul li a {line-height: 2.5; font-size: 15px; font-weight: 600; color: #ffffff;}
+.videoguide_body {width: 700px; height: auto; border: 1px solid #cccccc; border-radius: 0px 0px 15px 15px; position: relative;}
+/* 비디오 가이드 끝*/
+

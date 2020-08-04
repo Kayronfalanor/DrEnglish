@@ -1,0 +1,681 @@
+﻿<%@Codepage=65001%>
+<%
+Response.CharSet = "utf-8"
+Session.CodePage = 65001
+
+Response.AddHeader "Pragma","no-cache"
+Response.AddHeader "Expires","0"
+
+'// Login 여부
+Dim IsLogin : IsLogin = False
+%>
+<!--#include virtual="/commonfiles/DBINCC/DBINCC1.asp" -->
+<%
+	'chkRollPop "M07"
+
+
+	iMemberSeq		= sqlcheck(Replace(Trim(request("iMemberSeq")),"'","''"))
+	searchDate		= sqlcheck(Replace(Trim(request("searchDate")),"'","''"))
+	iCourseSeq		= sqlcheck(Replace(Trim(request("iCourseSeq")),"'","''"))
+	iCLCourseSeq	= sqlcheck(Replace(Trim(request("iCLCourseSeq")),"'","''"))
+	iCallCenterSeq	= sqlcheck(Replace(Trim(request("iCallCenterSeq")),"'","''"))
+	iTeacherSeq		= sqlcheck(Replace(Trim(request("iTeacherSeq")),"'","''"))
+
+
+	sql = "exec PRC_tb_DailyReport_Select_List_Monthly "
+	sql = sql & " @nvcCPCode = '" & SiteCPCode & "' "
+	sql = sql & " ,@iCourseSeq = '" & iCourseSeq & "' "
+	sql = sql & " ,@iCLCourseSeq = '" & iCLCourseSeq & "' "
+	sql = sql & " ,@iCallcenterSeq = '" & iCallCenterSeq & "' "
+	sql = sql & " ,@iTeacherSeq = '" & iTeacherSeq & "' "
+	sql = sql & " ,@currDate = '" & Left(searchDate,7) & "' "
+	sql = sql & " ,@iMemberSeq = '" & iMemberSeq & "' "
+	'Response.write sql
+
+	set rs = dbSelect(sql)
+	if not rs.eof  Then
+
+			nvcMemberName	= Trim(Rs(1))
+			nvcMemberEName	= Trim(Rs(20))
+           AttendanceDate		= Trim(Rs(7))
+		   AttendanceGubun	= Trim(Rs(9))
+		   attend4					= Trim(Rs(19))
+
+	End if
+
+	rs.close
+	set rs=Nothing
+
+	Call DBClose()
+
+
+
+
+	AttendanceDate_Array		= ""
+	AttendanceGubun_Array	= ""
+	attend4_Array					= ""
+
+	If AttendanceDate&"" <> "" Then
+		AttendanceDate_Array = Split(AttendanceDate, "^,")
+	End if
+
+	If AttendanceGubun&"" <> "" Then
+		AttendanceGubun_Array = Split(AttendanceGubun, "^,")
+	End If
+
+	If attend4&"" <> "" Then
+		attend4_Array = Split(attend4, "^,")
+	End If
+
+
+	chart_categories	= ""
+
+	chart1_column	= ""
+	chart2_column	= ""
+	chart3_column	= ""
+	chart4_column	= ""
+	chart5_column	= ""
+	chart6_column	= ""
+
+
+
+
+	if isArray(AttendanceDate_Array) Then
+
+		For iFor=1 To ubound(AttendanceDate_Array)
+
+			tmpArry1 = Split(AttendanceDate_Array(iFor), "/")	'0:nvcDailyReportDate, 1:nvcScheTime, 2:siScheType
+
+			'0:nvcDailyReportDate
+			If chart_categories <> "" Then	 chart_categories = chart_categories & ","	End if
+			chart_categories = chart_categories & "'" &Split(tmpArry1(0), "-")(1) & "/" & Split(tmpArry1(0), "-")(2) & "'"
+
+
+		Next
+
+	End If
+
+
+	if isArray(AttendanceGubun_Array) Then
+
+		For iFor=1 To ubound(AttendanceGubun_Array)
+
+			tmpArry2 = Split(AttendanceGubun_Array(iFor), "/")		'0:siAttendance, 1:siScheType, 2:iDailyReportSeq, 3:siTitlePoint1, 4:siTitlePoint2, 5:siTitlePoint3, 6:siTitlePoint4, 7:siTitlePoint5, 8:siTitlePoint6
+
+			'3:siTitlePoint1
+			If chart1_column <> "" Then	 chart1_column = chart1_column & ","	End if
+			chart1_column = chart1_column & tmpArry2(3)
+
+			'4:siTitlePoint2
+			If chart2_column <> "" Then	 chart2_column = chart2_column & ","	End if
+			chart2_column = chart2_column & tmpArry2(4)
+
+			'5:siTitlePoint3
+			If chart3_column <> "" Then	 chart3_column = chart3_column & ","	End if
+			chart3_column = chart3_column & tmpArry2(5)
+
+			'6:siTitlePoint4
+			If chart4_column <> "" Then	 chart4_column = chart4_column & ","	End if
+			chart4_column = chart4_column & tmpArry2(6)
+
+			'7:siTitlePoint5
+			If chart5_column <> "" Then	 chart5_column = chart5_column & ","	End if
+			chart5_column = chart5_column & tmpArry2(7)
+
+			'8:siTitlePoint6
+			If chart6_column <> "" Then	 chart6_column = chart6_column & ","	End if
+			chart6_column = chart6_column & tmpArry2(8)
+
+		Next
+
+	End If
+
+
+
+	Dim to_month
+	select case CInt(Month(searchDate))
+		case 1	:	to_month="January"
+		case 2	:	to_month="February"
+		case 3	:	to_month="March"
+		case 4	:	to_month="April"
+		case 5	:	to_month="May"
+		case 6	:	to_month="June"
+		case 7	:	to_month="July"
+		case 8	:	to_month="August"
+		case 9	:	to_month="September"
+		case 10	:	to_month="October"
+		case 11	:	to_month="November"
+		case 12	:	to_month="December "
+	end select
+
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title><%=subTitleName%></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<link rel="stylesheet" href="/Commonfiles/Scripts/billboardJs/billboard.css">
+	<link href="/css/main.css" rel="stylesheet" type="text/css" />
+
+	<script src="/Commonfiles/Scripts/jquery-3.4.1.min.js"></script>
+	<script src="/Commonfiles/Scripts/billboardJs/d3.v5.min.js"></script>
+	<script src="/Commonfiles/Scripts/billboardJs/billboard.js"></script>
+
+	<style>
+		.ptit{height: 45px; background-color: #3369c3; font-size: 18px; font-family: 'Malgun Gothic','맑은 고딕'; color: #fff; padding-top: 15px; padding-left: 30px;}
+		.tbl_basic table{border-top: 1px solid #42b085; border-bottom: 1px solid #42b085;}
+		.tbl_basic table th{
+			background-color: #f5fefa;
+			border-right: 1px solid #42b085;
+			border-top: 1px solid #42b085;
+			font-size: 14px;
+			font-family: 'Malgun Gothic','맑은 고딕';
+			color: #444;
+			font-weight: normal;
+			text-align: center;
+			height: 45px;
+		}
+		.tbl_basic table td{
+			border-top: 1px solid #42b085;
+			padding-left: 20px;
+			color: #444;
+			font-size: 14px;
+			font-family: 'Malgun Gothic','맑은 고딕';
+		}
+		.btn_popblock {text-align:center;}
+		.btn_popblock a{
+			background-color: #555;
+			width: 90px;
+			height: 23px;
+			padding-top: 2px;
+			display: inline-block;
+			font-size: 14px;
+			font-family: 'Malgun Gothic','맑은 고딕';
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;text-align: center;
+		}
+		.ChartTd{width:120px; font-size:15px; text-align:center; }
+		.ChartDiv{width:700px; height:200px;}
+
+		.Chart_dataLabel{font-size:14px;}
+		.Chart_tick{font-size:14px;}
+	</style>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$(this).focus();
+
+			var chart1 = bb.generate({
+				data: {
+					columns: [
+/*
+						["column",
+							2, 4, 6, 8, 10,
+							4, 2, 4, 6, 8,
+							10, 4, 4, 8, 6,
+							2, 4, 10, 8, 6,
+						]
+*/
+						["column", <%=chart1_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+/*
+						categories: [
+							"03/01", "03/02", "03/03", "03/04", "03/05",
+							"03/06", "03/07", "03/08", "03/09", "03/10",
+							"03/11", "03/12", "03/13", "03/14", "03/15",
+							"03/16", "03/17", "03/18", "03/19", "03/20",
+						],
+*/
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart1"
+			});
+			chart1.legend.hide("column");
+
+
+			var chart2 = bb.generate({
+				data: {
+					columns: [
+						["column", <%=chart2_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart2"
+			});
+			chart2.legend.hide("column");
+
+
+			var chart3 = bb.generate({
+				data: {
+					columns: [
+						["column", <%=chart3_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart3"
+			});
+			chart3.legend.hide("column");
+
+
+			var chart4 = bb.generate({
+				data: {
+					columns: [
+						["column", <%=chart4_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart4"
+			});
+			chart4.legend.hide("column");
+
+
+			var chart5 = bb.generate({
+				data: {
+					columns: [
+						["column", <%=chart5_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart5"
+			});
+			chart5.legend.hide("column");
+
+
+			var chart6 = bb.generate({
+				data: {
+					columns: [
+						["column", <%=chart6_column%>]
+					],
+					types: {
+						"column": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					x: {
+						type: "category",
+						categories: [<%=chart_categories%>],
+						tick: {
+							multiline: false,
+						},
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10],
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bar: {
+					width:30,
+				},
+				bindto: "#chart6"
+			});
+			chart6.legend.hide("column");
+
+
+			var chart1_column_arry = "<%=chart1_column%>".split(",");
+			var chart2_column_arry = "<%=chart2_column%>".split(",");
+			var chart3_column_arry = "<%=chart3_column%>".split(",");
+			var chart4_column_arry = "<%=chart4_column%>".split(",");
+			var chart5_column_arry = "<%=chart5_column%>".split(",");
+			var chart6_column_arry = "<%=chart6_column%>".split(",");
+
+			var chart1_column_avg = fArrayAvg(chart1_column_arry);
+			var chart2_column_avg = fArrayAvg(chart2_column_arry);
+			var chart3_column_avg = fArrayAvg(chart3_column_arry);
+			var chart4_column_avg = fArrayAvg(chart4_column_arry);
+			var chart5_column_avg = fArrayAvg(chart5_column_arry);
+			var chart6_column_avg = fArrayAvg(chart6_column_arry);
+
+			var chart_avg = bb.generate({
+				data: {
+					columns: [
+						["avg", chart1_column_avg, chart2_column_avg, chart3_column_avg, chart4_column_avg, chart5_column_avg, chart6_column_avg]
+					],
+					types: {
+						"avg": "bar"
+					},
+					labels: true
+				},
+				axis: {
+					rotated: true,
+					x: {
+						type: "category",
+						categories: ["Speaking (말하기)", "Pronunciation (발음)", "Grammar (문법)", "Vocabulary (단어)", "Listening (듣기)", "Overall (종합)"],
+						tick: {
+							multiline: false,
+							text:{show:false},
+						},
+
+					},
+					y: {
+						max : 10,
+						tick: {
+							show: true,
+							values: [0, 2, 4, 6, 8, 10]
+						}
+					},
+				},
+				tooltip: {
+					show: false
+				},
+				bindto: "#chart_avg"
+			});
+			chart_avg.legend.hide("avg");
+
+
+			d3.selectAll(".bb-text").attr("class", "Chart_dataLabel");
+			d3.selectAll(".tick text tspan").attr("class", "Chart_tick");
+
+
+		});
+
+
+		function fArrayAvg( pArray ){
+
+			var nSum	= 0;
+			var nAvg	= 0;
+
+			for(var i=0;i<pArray.length;i++){
+			nSum = nSum + parseInt(pArray[i], 10);
+			}
+
+			nAvg = nSum / pArray.length;
+
+			if( nAvg.toString().length > 4 ){
+				nAvg = nAvg.toFixed(1);
+			}
+
+			return nAvg;
+
+		}
+
+
+
+	</script>
+
+</head>
+
+<body style="padding:0px; margin:0px;">
+
+	<h2 class="ptit">Report in <%=to_month%>. <%=Year(searchDate)%></h2>
+
+	<div style="padding:10px 30px;">
+		<div class="tbl_basic">
+
+			<table width="100%" style="border-spacing: 0; border-collapse: collapse;">
+				<colgroup>
+				<col width="18%" />
+				<col width="32%" />
+				<col width="18%" />
+				<col width="32%" />
+				</colgroup>
+				<tr>
+					<th>Student’s Name</th>
+					<td><%=nvcMemberEName&" ["&nvcMemberName&"] "%></td>
+					<th>Class Month</th>
+					<td><%=Left(searchDate,7)%></td>
+				</tr>
+			</table>
+
+		</div>
+		<br />
+		<div class="tbl_grp">
+
+			<table border="0">
+				<tr>
+					<td class="ChartTd">Speaking<br />(말하기)	</td>
+					<td><div id="chart1" class="ChartDiv"></div></td>
+				</tr>
+				<tr>
+					<td class="ChartTd">Pronunciation<br />(발음)</td>
+					<td><div id="chart2" class="ChartDiv"></div></td>
+				</tr>
+				<tr>
+					<td class="ChartTd">Grammar<br />(문법)</td>
+					<td><div id="chart3" class="ChartDiv"></div></td>
+				</tr>
+				<tr>
+					<td class="ChartTd">Vocabulary<br />(단어)</td>
+					<td><div id="chart4" class="ChartDiv"></td>
+				</tr>
+				<tr>
+					<td class="ChartTd">Listening<br />(듣기)</td>
+					<td><div id="chart5" class="ChartDiv"></td>
+				</tr>
+				<tr>
+					<td class="ChartTd">Overall<br />(종합)</td>
+					<td><div id="chart6" class="ChartDiv"></td>
+				</tr>
+			</table>
+
+		</div>
+
+	</div>
+
+
+	<br /><br />
+
+
+	<h2 class="ptit">Average</h2>
+
+	<div style="padding:10px 30px;">
+		<div class="tbl_grp">
+
+			<table border="0">
+				<tr>
+					<td class="ChartTd" style="position:relative; height">
+						<div style="position:absolute; left:0px; top:7px; width:150px; text-align:right; line-height:49px; border:0px solid #ff0000;">
+							Speaking (말하기)
+							<br />
+							Pronunciation (발음)
+							<br />
+							Grammar (문법)
+							<br />
+							Vocabulary (단어)
+							<br />
+							Listening (듣기)
+							<br />
+							Overall (종합)
+						</div>
+					</td>
+					<td style="position:relative;">
+						<div id="chart_avg" style="float:left; width:600px; height:350px; border:0px solid #ff0000;"></div>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+
+	<br />
+
+
+	<h2 class="ptit">TEACHER`S COMMENT</h2>
+
+	<div style="padding:10px 30px;">
+
+		<div class="tbl_basic">
+
+			<table class="tbl_basic" width="100%" style="border-spacing: 0; border-collapse: collapse; table-layout:fixed;">
+				<colgroup>
+					<col width="18%" />
+					<col width="82%" />
+				</colgroup>
+<%
+	if isArray(AttendanceDate_Array) then
+
+		For iFor=1 To ubound(AttendanceDate_Array)
+%>
+				<tr>
+					<th><%=Split(AttendanceDate_Array(iFor), "/")(0)%></th>
+					<td>
+<%
+				if isArray(attend4_Array) Then
+%>
+						<pre style="font-family: 'Malgun Gothic','맑은 고딕';"><%=Split(attend4_Array(iFor), "/")(2)%></pre>
+<%
+				End if
+%>
+					<td>
+				</tr>
+<%
+		Next
+
+	End if
+
+%>
+			</table>
+
+			<br />
+
+			<div class="btn_popblock">
+				<a href="javascript:print()" class="btn_pop">프린트</a>
+				&nbsp;&nbsp;
+				<a href="javascript:window.close()" class="btn_pop">닫기</a>
+			</div>
+
+		</div>
+	</div>
+
+	<br /><br />
+
+</body>
+</html>
+

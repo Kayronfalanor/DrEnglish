@@ -1,0 +1,281 @@
+﻿<%@Codepage=65001%>
+<%
+Response.CharSet = "utf-8"
+Session.CodePage = 65001
+
+Response.AddHeader "Pragma","no-cache"
+Response.AddHeader "Expires","0"
+
+'// Login 여부
+Dim IsLogin : IsLogin = False
+'// menu setting
+Dim mMenu : mMenu = "1"
+Dim sMenu : sMenu = "9"
+%>
+<!--#include virtual="/commonfiles/DBINCC/DBINCC1.asp" -->
+<%
+Type_ =sqlCheck(replace(request("Type"),"'","''"))
+IF Type_ = "" THEN
+	Type_ = "1"
+END IF
+%>
+<!--#include virtual="/include/inc_top.asp"-->
+<script language="javascript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+
+
+
+function fn_room(CPCODE,CPUSERS,ID,NAME,STATE,TITLE,CINDEX,MAXUSER,VIEWUSER,PLAYTIME,STIME){
+	//alert(CPCODE+"\n"+CPUSERS+"\n"+ID+"\n"+NAME+"\n"+STATE+"\n"+TITLE+"\n"+CINDEX+"\n"+MAXUSER+"\n"+VIEWUSER+"\n"+PLAYTIME+"\n"+STIME);
+
+	var ff = document.fclassstart;
+
+		ff.id.value = "";
+		ff.name.value = "";
+		ff.state.value = "";
+		ff.title.value = "";
+		ff.cindex.value = "";
+		ff.maxuser.value = "";
+		ff.playtime.value = "";
+		ff.stime.value = "";
+
+		ff.roomtype.value = "";
+
+		ff.id.value = ID;
+		ff.name.value = NAME;
+		ff.state.value = STATE;
+		ff.title.value = TITLE;
+		ff.cindex.value = CINDEX;
+		ff.maxuser.value = MAXUSER;
+		ff.playtime.value = PLAYTIME;
+		ff.stime.value = STIME;
+
+		ff.submit();
+
+
+}
+
+
+-->
+</script>
+
+<% If LCase(BrowseFlag) = "android" Or LCase(BrowseFlag) = "ios" Then %>
+<form name="fclassstart" method="post" target="_blank" action="<%=MobileVideoClassURL%>" >
+	<input type="hidden" name="id" id="id" value="">  <!--  id-->
+	<input type="hidden" name="name"  id="name" value=""> <!--  name-->
+	<input type="hidden" name="state" id="state" value=""> <!-- state-->
+	<input type="hidden" name="title" id="title" value=""> <!-- 강사의 title (수강과정)-->
+	<input type="hidden" name="cindex" id="cindex" value=""> <!--  수업 index     nvcCPCode_iScheduleseq_yyyymmddhhmm -->
+	<input type="hidden" name="maxuser"  id="maxuser" value=""><!-- 수업 maxuser-->
+	<input type="hidden" name="playtime" id="playtime" value=""> <!-- 수업 playtime-->
+	<input type="hidden" name="stime"  id="stime" value="">	 <!-- 수업의 hhmm-->
+	<input type="hidden" name="roomtype"  id="roomtype" value="">
+	<input type="hidden" name="nvcCPCode" id="nvcCPCode" value="<%=SiteCPCode%>">	 <!-- CPCODE-->
+	<input type="hidden" name="CompanyCode" id="CompanyCode" value="<%=SiteCPCode%>">	 <!-- CPCODE-->
+	<input type="hidden" name="ScheduleCPCode" id="ScheduleCPCode" value="<%=SiteCPCode%>">	 <!-- ScheduleCPCode-->
+	<input type="hidden" name="MobileFlag" value="<%=MobileFlag%>">
+	<input type="hidden" name="version" value="<%=siteconfigversion%>">
+</form>
+<% Else %>
+<form name="fclassstart" method="post" target="_blank" action="http://Siteconfig.inetstudy.co.kr/ClassConfig/Videolink.asp">
+	<input type="hidden" name="id" id="id" value="">  <!--  id-->
+	<input type="hidden" name="name"  id="name" value=""> <!--  name-->
+	<input type="hidden" name="state" id="state" value=""> <!-- state-->
+	<input type="hidden" name="title" id="title" value=""> <!-- 강사의 title (수강과정)-->
+	<input type="hidden" name="cindex" id="cindex" value=""> <!--  수업 index     nvcCPCode_iScheduleseq_yyyymmddhhmm -->
+	<input type="hidden" name="maxuser"  id="maxuser" value=""><!-- 수업 maxuser-->
+	<input type="hidden" name="playtime" id="playtime" value=""> <!-- 수업 playtime-->
+	<input type="hidden" name="stime"  id="stime" value="">	 <!-- 수업의 hhmm-->
+	<input type="hidden" name="roomtype"  id="roomtype" value="">
+	<input type="hidden" name="nvcCPCode" id="nvcCPCode" value="<%=SiteCPCode%>">	 <!-- CPCODE-->
+	<input type="hidden" name="CompanyCode" id="CompanyCode" value="<%=SiteCPCode%>">	 <!-- CPCODE-->
+	<input type="hidden" name="ScheduleCPCode" id="ScheduleCPCode" value="<%=SiteCPCode%>">	 <!-- ScheduleCPCode-->
+	<input type="hidden" name="MobileFlag" value="<%=MobileFlag%>">
+	<input type="hidden" name="version" value="<%=siteconfigversion%>">
+</form>
+<% End If%>
+
+<div class="contents_right">
+  <div><img src="/img/subimg/title_3.png" alt="화상영어가이드 "/></div>
+  <div style="margin-top: 40px;">
+
+  <strong>1. Test1~Test3 중 하나를 클릭하여 화상 프로그램을 실행합니다.(먼저 프로그램 설치를 하세요.)</strong><br>
+    <strong>단, PC에서만 아래 TEST 클릭 가능합니다. </strong><br><br>
+					<table cellpadding="2" cellspacing="2" border=0 width="700" >
+						<%
+						For i = 1 To 3
+						newid=""
+						newname=""
+						newid=randNumChoice&i
+						newname=randNumChoice&i
+						newroom="ROOM_" + randNumChoice&i
+						%>
+						<tr>
+							<td width="180" height="30" bgcolor="#27a5e0" align="Center"><strong><font color="#ffffff">TEST ROOM <%=i%></font></strong></td>
+							<td bgcolor="#e0e0e0" width="520">&nbsp;&nbsp;
+
+							<a href="javascript:fn_room('<%=SiteCPCOde%>','2','<%=newid%>_PC','<%=newname%>_PC','2','<%=newroom%>','<%=newroom%>','1','1','30','<%=Replace(Left(now(),10),"-","")%>0930');"><strong>Test<%=i%>_PC</strong></a>
+
+
+							<% If LCase(BrowseFlag) = "android" Then %>
+							&nbsp;&nbsp;
+							<a href="javascript:fn_room('<%=SiteCPCOde%>','2','<%=newid%>_ADR','<%=newname%>_ADR','2','<%=newroom%>','<%=newroom%>','1','1','30','<%=Replace(Left(now(),10),"-","")%>0930');"><strong>Test<%=i%>_Android</strong></a>
+							<% End If %>
+
+							<% If LCase(BrowseFlag) = "ios" Then %>
+							&nbsp;&nbsp;
+							<a href="javascript:fn_room('<%=SiteCPCOde%>','2','<%=newid%>_IOS','<%=newname%>_IOS','2','<%=newroom%>','<%=newroom%>','1','1','30','<%=Replace(Left(now(),10),"-","")%>0930');"><strong>Test<%=i%>_IOS</strong></a>
+							<% End If %>
+
+							</td>
+						</tr>
+
+						<%
+						next
+							function randNumChoice()
+							  Dim RandNum                 : RandNum = ""
+							  Dim coupTemp                : coupTemp=""
+							  Dim couponValue(35)
+
+							  couponValue(0)   = "A"
+							  couponValue(1)   = "B"
+							  couponValue(2)   = "C"
+							  couponValue(3)   = "D"
+							  couponValue(4)   = "E"
+							  couponValue(5)   = "F"
+							  couponValue(6)   = "G"
+							  couponValue(7)   = "H"
+							  couponValue(8)   = "I"
+							  couponValue(9)   = "J"
+							  couponValue(10)  = "K"
+							  couponValue(11)  = "L"
+							  couponValue(12)  = "M"
+							  couponValue(13)  = "N"
+							  couponValue(14)  = "O"
+							  couponValue(15)  = "P"
+							  couponValue(16)  = "Q"
+							  couponValue(17)  = "R"
+							  couponValue(18)  = "S"
+							  couponValue(19)  = "T"
+							  couponValue(20)  = "U"
+							  couponValue(21)  = "V"
+							  couponValue(22)  = "W"
+							  couponValue(23)  = "X"
+							  couponValue(24)  = "Y"
+							  couponValue(25)  = "Z"
+							  couponValue(26)  = "0"
+							  couponValue(27)  = "1"
+							  couponValue(28)  = "2"
+							  couponValue(29)  = "3"
+							  couponValue(30)  = "4"
+							  couponValue(31)  = "5"
+							  couponValue(32)  = "6"
+							  couponValue(33)  = "7"
+							  couponValue(34)  = "8"
+							  couponValue(35)  = "9"
+
+							  Do while true
+								Randomize
+								coupTemp = couponValue(Int((35- 0 + 1) * Rnd + 0))
+								if instr(RandNum, coupTemp) = 0 then
+									RandNum = RandNum & coupTemp
+									if Len(RandNum) = 4 then
+									  Exit Do
+									End If
+								End If
+							  Loop
+							  randNumChoice = RandNum
+							End Function
+						%>
+					</table>
+					<br><br>
+  <!-- Navigational collection of links to sections below -->
+
+  <ul data-tabscrollnavcontainer class="tab_ul">
+    <li dataseq="1"> <a href="#one" class="tab_a" >권장 PC사양</a> </li>
+    <li dataseq="2"> <a href="#two" class="tab_a" >캠 설정방법</a> </li>
+    <li dataseq="3"> <a href="#three" class="tab_a" >헤드셋 설정방법</a> </li>
+    <li dataseq="4"> <a href="#four" class="tab_a" >VISTA 환경설정</a> </li>
+    <li dataseq="5"> <a href="#five" class="tab_a" >장애관련 Q&A</a> </li>
+	<li dataseq="6"> <a href="#six" class="tab_a" >모바일가이드</a> </li>
+  </ul>
+
+  <!-- collection of sections -->
+  <article>
+    <section id="one" >
+      <p ><!--#include file="Videoguide01.asp" --> </p>
+    </section>
+
+    <section id="two">
+      <p><!--#include file="Videoguide02.asp" --> </p>
+    </section>
+
+	   <section id="three">
+      <p><!--#include file="Videoguide03.asp" --></p>
+    </section>
+
+	   <section id="four">
+      <p><!--#include file="Videoguide04.asp" --></p>
+    </section>
+
+	   <section id="five">
+      <p><!--#include file="Videoguide05.asp" --></p>
+    </section>
+
+	 <section id="six">
+      <p><!--#include file="Videoguide06.asp" --></p>
+    </section>
+  </article>
+</div>
+
+<script src="/Commonfiles/Scripts/tabscroll.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+	$("#dataseq1").show();
+
+
+
+	$(".tab_ul li").click(function(){
+
+		if ($(this).attr("dataseq") != "")
+		{
+
+			$("#dataseq6").hide();
+			$("#dataseq5").hide();
+			$("#dataseq4").hide();
+			$("#dataseq3").hide();
+			$("#dataseq2").hide();
+			$("#dataseq1").hide();
+
+			$("#dataseq"+$(this).attr("dataseq")).show();
+		}
+	});
+
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</div>
+
+
+<!--#include virtual="/include/inc_footer.asp"-->

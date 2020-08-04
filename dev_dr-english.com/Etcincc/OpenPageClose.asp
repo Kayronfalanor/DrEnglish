@@ -1,0 +1,1 @@
+<a href="javascript:window.close()"><img src="/AdminImage/PopUpBoxclose.gif" width="93" height="22" border="0"></a>

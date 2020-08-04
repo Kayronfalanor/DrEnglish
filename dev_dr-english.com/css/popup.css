@@ -1,0 +1,141 @@
+/* CSS Document */
+
+/* ÀüÃ¼°øÅë */
+
+	body {background-image:url(../img/popup/bg.gif); background-repeat:no-repeat; }
+	body, td, tr {margin:0px; font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; line-height: 130%; color: #898989; letter-spacing:-0.5px; }
+	
+/* ¸µÅ©¼Ó¼º */
+	
+	a:link {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; color:#e94f2e; text-decoration:none; }
+	a:visited {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; color:#707070; text-decoration:none; }
+	a:hover {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; color:#e94f2e; text-decoration:none; }
+	a:active {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; color:#666666; text-decoration:none; }
+
+
+/* ³»¿ë */
+	
+	.time {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; line-height: 130%; color:#e94f2e; }
+	.time2 {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; line-height: 130%; color:#707070; }
+	.time3 {font-family: "Arial", "±¼¸²Ã¼"; font-size: 8pt; line-height: 130%; color:#c5d5e8; }
+	.text {font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; line-height: 130%; color: #a67c52; }
+	.name {font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; line-height: 130%; color: #754c24; font-weight:bold; }
+	.point {font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; line-height: 130%; color: #f26c4f; }
+	.point2 {font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; line-height: 130%; color: #f26c4f; font-weight:bold; }
+	.input {font-family: "Arial", "±¼¸²Ã¼"; font-size: 12px; line-height: 130%; color: #898989;
+			background-color: #f5f5f5; border: 1px solid #cccccc; height:15px;}
+	.select {font-family: "Arial", "±¼¸²Ã¼"; font-size: 12px; line-height: 130%; color: #898989;
+			background-color: #f5f5f5; border: 1px solid #cccccc; }
+	.point4{
+	font-family: "Arial", "±¼¸²Ã¼";
+	font-size: 9pt;
+	line-height: 130%;
+	color: #f26c4f;
+	font-weight:bold;
+	text-decoration: underline;
+}
+
+	.popup {margin:0;padding:0;}
+	.popup li {list-style:none;}
+/* txt */
+  
+  .point02{
+	color: #F26C4F;}
+	
+	.point03{
+	color: #40a4d7;
+	font-weight:bold;
+	letter-spacing:-1px;
+	font-size:0.9em;
+	font-family: "Arial", "µ¸¿ò"; }
+	
+	.agree_txt{ 
+	overflow:scroll; 
+	margin:0px; 
+	font-family: "µ¸¿ò"; 
+	font-size: 11pt;  
+	line-height: 160%; }	
+
+ 	.point_b{font-weight:bold; text-align:left;}
+  
+    .point_w td{
+	color: #ffffff; letter-spacing:-1px;}
+ 
+/* table */ 
+  	table.t_style02{
+	height:25px;
+	text-align:left;
+	letter-spacing:-0.5px;
+	}
+	
+	table.t_style02 th{
+	background-color:#eff6fb;
+	height:25px;
+	text-align:left;
+	padding-left:17px;
+	
+	}
+	table.t_style02 td{
+	padding-left:2px;
+	}
+	
+	/* notice */	
+
+	.notice_style td{
+	height:25px;
+	text-align:center;
+	border-bottom:1px solid #e0e0e0;
+	}
+	
+	
+	.notice_style .t_cetner{
+	text-align:left;
+	}
+	
+	.notice_t_box td{
+	border-bottom:1px solid #e0e0e0;
+	border-top:1px solid #e0e0e0;
+	padding:22px;
+	text-align:left;
+	}
+	
+	.notice_t_photo td{
+	border-bottom:1px solid #e0e0e0;
+	border-top:1px solid #e0e0e0;
+	padding:22px;
+	text-align:center;
+	}
+	
+	.befor_txt td{
+	border-bottom:1px solid #e0e0e0;
+	height:30px; 
+	text-align:left;
+	padding-left:5px;
+	}
+	
+	.befor_txt th{
+	text-align:center;
+	border-bottom:1px solid #e0e0e0;
+	background-color:#f3f3f3;
+	}
+	
+	.lable td{
+	border-bottom:1px solid #e0e0e0;
+	text-align:left;
+	padding-left:5px;
+	}
+	
+	.lable th{
+	text-align:center;
+	border-bottom:1px solid #e0e0e0;
+	background-color:#f3f3f3;
+	}
+
+	.reply td {border-bottom:1px solid #e0e0e0; height:26px; text-align:center; padding:15px;}
+	.reply .t_left{border-bottom:1px solid #e0e0e0; height:26px; text-align:left;}
+
+/*partnership*/
+
+    .sub07_t_style{ font-size:16px; font-weight:bold; text-align:center; color:#636363; }
+	.sub07_t_style02{ color:#ff4c00; }
+	.sub07_table_style{ padding-left:10px;}

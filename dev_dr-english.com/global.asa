@@ -1,0 +1,103 @@
+﻿<!--METADATA TYPE= "typelib"  NAME= "ADODB Type Library" FILE="C:\Program Files\Common Files\SYSTEM\ADO\msado15.dll"  -->
+
+<SCRIPT LANGUAGE="VBScript" RUNAT="Server">
+
+Sub Application_OnStart
+
+	Dim DBip,DBcatalog,DBUID,DBPW
+
+
+
+	DBip="sql16ssd-008.localnet.kr"
+	DBcatalog="euniskang74_upside"
+	DBUID="euniskang74_upside"
+	DBPW="upside74*"
+
+	Application.Lock
+		Application("nowCount")=0
+		Application("Cnnstring")="Provider=SQLOLEDB;Data Source="&DBip&";Initial Catalog="&DBcatalog&";User ID="&DBUID&";Password="&DBPW&";Persist Security Info=True;"
+
+	Application.UnLock
+
+
+End Sub
+
+Sub Session_OnStart
+
+	Dim db
+	Set db = Server.CreateObject("ADODB.Connection")
+	db.Open Application("Cnnstring")
+
+	'##### ? CP ?
+	Dim SiteCPCode : SiteCPCode = "UD001"
+	Dim arrCP
+	sql = "SELECT nvcCPCode, nvcCPName, siOrder,nvcCall,nvcCeo, nvcAssignName,nvcAssignTel,nvcAssignEmail,nvcDomain1,nvcEmail FROM TB_CP WITH(READUNCOMMITTED) WHERE nvcCPCode = N'"& SiteCPCode &"'"
+	Set objRs = db.Execute(sql)
+	If Not objRs.Eof Then
+		arrCP = objRs.GetRows()
+	End If
+	objRs.Close
+
+	If IsArray(arrCP) Then
+		Application.Lock
+
+		Application("CP_Code") = arrCP(0, 0)
+		Application("CP_Name") = arrCP(1, 0)
+		Application("CP_Order")= arrCP(2, 0)
+		Application("CP_Call") = arrCP(3, 0)
+		Application("CP_ComName") = arrCP(4, 0)
+		Application("CP_AssignName") = arrCP(5, 0)
+		Application("CP_AssignTel") = arrCP(6, 0)
+		Application("CP_AssignEmail") = arrCP(7, 0)
+		Application("CP_Domain") = arrCP(8, 0)
+		Application("CP_Email") = arrCP(9, 0)
+
+		Application.UnLock
+	End If
+
+	'##### ?
+	Dim arrCode1, arrCode2
+	sql = "SELECT nvcCode1 FROM TB_COMMON_CODE WITH(READCOMMITTED) WHERE nvcFlag = N'Y' GROUP BY nvcCode1 "
+	Set objRs = db.Execute(sql)
+	If Not objRs.Eof Then
+		arrCode1 = objRs.GetRows()
+	End If
+	objRs.Close
+
+	If IsArray(arrCode1) Then
+
+		Application.Lock
+
+		For i = 0 To Ubound(arrCode1, 2)
+
+			sql = "SELECT nvcCode2, nvcName FROM TB_COMMON_CODE WITH(READCOMMITTED) "
+			sql = sql & "WHERE nvcCode1 = N'"& arrCode1(0, i) &"' AND nvcFlag = N'Y' "
+			Set objRs = db.Execute(sql)
+			If Not objRs.Eof Then
+				Application("Common_"& arrCode1(0, i)) = objRs.GetRows()
+			Else
+				Application("Common_"& arrCode1(0, i)) = NULL
+			End If
+			objRs.Close
+
+		Next
+
+		Application.UnLock
+
+	End If
+	Set objRs = Nothing
+	db.Close
+	Set db = Nothing
+End Sub
+
+Sub Session_OnEnd
+
+	session.Abandon
+
+End Sub
+
+Sub Application_OnEnd
+
+End sub
+
+</SCRIPT>

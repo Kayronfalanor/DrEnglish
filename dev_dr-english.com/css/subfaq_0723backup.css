@@ -1,0 +1,112 @@
+/* CSS Document */
+
+
+@import url("table.css");
+
+	
+	*{margin:0xp; padding:0px;}
+	
+	html,body {color:#666666; margin:0; padding:0;}
+	body{ margin:0px; font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; }
+	dl, dt, dd {list-style-type:none; padding:0: margin:0;}
+/* link */
+	
+	a:link { font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; color:#666666; text-decoration:none; }
+	a:visited { font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; color:#666666; text-decoration:none; }
+	a:hover { font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; color:#f9793c; text-decoration:underline; }
+	a:active { font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; color:#666666; text-decoration:none; }
+
+	.txt_space td{ letter-spacing:1.5px; font-family: "Arial", "±¼¸²Ã¼"; font-size: 9pt; }
+
+
+/* tab_on_off */
+
+	.titletab { padding-left:0px; text-align:left;  padding:0px; }
+	.titletab ul {   }
+	.titletab li { float:left; padding-top:16px; padding-left:0px; }
+	.titletab li img { vertical-align:top; }
+	li {list-style:none;}
+
+/* txt */
+
+.txtleft{
+text-align:left;}
+
+
+table.blist2{
+	width:590px;
+	overflow:hidden;
+	text-align:left;
+	
+	}
+table.blist2 th{
+
+	height:37px;
+	border-bottom:1px solid #c6c6c6;
+	}
+table.blist2 td{
+	height:37px;
+	text-align:left;
+	border-bottom:1px solid #e3e3e3;
+	font-size:11px;
+	color:#7c7c7c;
+	}
+table.blist2 td.txt_blank{
+	text-align:center;
+	font-size:11px;
+	}
+	
+table.blist2 td.title_txt{
+	padding-left:0px;
+	text-align:left;
+	font-size:12px;
+	color:#454545;
+	}
+table.blist2 td.title_txt a{color:#454545;
+	}
+table.blist2 td.title_txt a.on{color:#454545;
+	font-weight:bold;
+	}
+table.blist2 td.title_txt a.off{color:#454545;
+	font-weight:normal;
+	}
+table.blist2 td.title_txt span{font-size:11px;
+	color:#e94700;
+	}
+table.blist2 td.think_txt{font-size:12px;
+	color:#454545;
+	font-weight:bold;
+	}
+table.blist2 td.tel_txt{text-align:left;
+	color:#7c7c7c;
+	}
+table.blist2 td.tel_txt span{font-size:11px;
+	color:#e94700;
+	font-weight:bold;
+	overflow:hidden;
+	}
+table.blist2 td.eanswer{
+	height:0;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	text-align:left;
+	background:#f4f4f4;
+	}
+table.blist2 td.eanswer div.eacont{
+	width:540px;	
+	overflow:hidden;
+	padding:10px 20px 10px 20px;
+	border-bottom:1px solid #e3e3e3;
+	}
+
+table.blist2 td strong.think{color:#6d00ff;
+	}
+table.blist2 td strong.wbook{color:#53b330;
+	}
+table.blist2 td strong.cs{color:#fd5f0b;
+	}
+table.blist2 td strong.book_tit{color:#454545;
+	}
+table.blist2 td strong.wbook_tit{color:#454545;
+	}
