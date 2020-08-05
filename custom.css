@@ -65,5 +65,37 @@ main {
   text-align: center;
 }
 
+#butto-hover {
+	width: 35px;
+	height: 35px;
+	border: 10px solid;
+	border-radius: 35px;
+	margin: 0 auto;
+	position: relative;
+	-webkit-transition: 
+		all 1s ease;
+	-moz-transition:
+		all: 1s ease;
+	-o-transition: all
+		1s ease;
+	-ms-transition: all
+		ease;
 
+}
 
+.dr-footer #foot-btn:hover {
+	width: 35px;
+	height: 35px;
+	border: #0047AB 12px solid;
+	-webkit-transition:
+		all 1s ease;
+	-moz-transition:
+		all 1s ease;
+	-o-transition: all
+		1s ease;
+	-ms-transition: all
+		1s ease;
+	transition: all 1s ease;
+	position: relative;
+
+}
