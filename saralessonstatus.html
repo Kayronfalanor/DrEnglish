@@ -84,44 +84,50 @@
 		<div class="profile-display"> <!--Left of screen-->
 			<img src="profile.png" alt="profile pic">
 			<div class="profiletxt">
-			<h4>Name님</h4>
-			<h1>00%</h1>
-			<h6>출석률</h6>
+				<p1>Name님</p1>
+				<p2>00%</p2>
+				<p3>출석률</p3>
 			</div>
 		</div>
 		<!--Status box-->
 		<div class="status"> <!--Next to profile-display-->
-		<table border="2px" cellpadding="2px" cellspacing="2px">
+		<table>
 			<tbody>
-				<tr height="50px;">
-					<td width="30%;">
-						<div class="schedule">
+				<tr>
+					<td class="column">
+						<div class="schedule" onclick="openbx1()">
 							<h3>수업일정</h3>
 						</div>
 					</td>
-					<td width="30%;">
-						<div class="progress">
+					<td class="column">
+						<div class="myprogress" onclick="openbx2()">
 							<h3>수업진도</h3>
 						</div>
 					</td>
-					<td width="30%;">
-						<div class="Report">
+					<td class="column">
+						<div class="report" onclick="openbx3()">
 							<h3>Report</h3>
 						</div>
 					</td>
 				</tr>
 				<div class="reportbx">
-				<tr class="scheduletr" height="220px;"><!--Visible when schedule is clicked-->
+				<tr id="scheduletr"><!--Visible when schedule is clicked-->
 					<table>
 						<tr>
-							<td>수업일</td>
-							<td>수업시간/분</td>
-							<td>레벨/진도</td>
-							<td>수업참여</td>
+							<td class="td1">수업일</td>
+							<td class="td1">수업시간/분</td>
+							<td class="td1">레벨/진도</td>
+							<td class="td1">수업참여</td>
 						</tr>
+						<tr>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                        </tr>
 					</table>
 				</tr>
-				<tr class="progresstr" height="220px;"><!--Visible when progress is clicked-->
+				<tr id="myprogresstr"><!--Visible when progress is clicked-->
 					<table>
 						<tr>
 							<td>출결석 형황:</td>
@@ -137,7 +143,7 @@
 						</tr>
 					</table>
 				</tr>
-				<tr class="reporttr" height="220px;"><!--Visible when report is clicked-->
+				<tr id="reporttr"><!--Visible when report is clicked-->
 					<!--Brief summary of Report-->
 				</tr>
 			</div>
@@ -186,7 +192,19 @@
 		crossorigin="anonymous"></script>
 
 		<script src='./carousel.js'></script>
-
+		<script src='./carousel.js'></script>
+	
+	<script><!--statusbx js-->
+    function openbx1() {
+        document.getElementById("scheduletr").style.visibility = "visible";
+    }
+    function openbx2() {
+        document.getElementById("progresstr").style.visibility = "visible";
+    }
+    function openbx3() {
+        document.getElementById("reporttr").style.visibility = "visible";
+    }
+    </script>
 
 	</body>
 
