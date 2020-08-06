@@ -17,6 +17,10 @@
   	/* height: 30px; */
 }
 
+#nav-logo {
+	margin: -10px;
+}
+
 /* Profile section (Simon)  */
 
 .profile {
@@ -33,10 +37,6 @@
   background-color: #0047ab;
   color: white;
   text-align: center;
-}
-
-#nav-logo {
-	margin: -10px;
 }
 
 .section {
