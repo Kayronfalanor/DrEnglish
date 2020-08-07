@@ -210,3 +210,16 @@ th, tr, td{
 		justify-content: center;
 	}
 }
+
+
+.faq-cell {
+    margin: 40px;
+}
+
+.faq-details-cell {
+    margin: 30px;
+}
+
+.faq-heading {
+    font-family: 'Ubuntu', sans-serif;
+}
