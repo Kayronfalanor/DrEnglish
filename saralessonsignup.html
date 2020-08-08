@@ -95,25 +95,34 @@
                 <li>수강신청 기간은 1개월 후 까지 신청가능합니다.</li>
                 <li>수강신청 횟수는 기존 수업수를 포함하여 1개월 8회까지 신청가능합니다.</li>
                 </ul>
-                <span>(기간: 30분)</span> 
+                <br>
+                <table class="table"> <!--Enrolled class and level-->
+                    <thead class="thead-primary">
+                      <tr>
+                        <th scope="col">최근 수업 / 레벨</th>
+                        <th scope="col">없음</th>
+                      </tr>
+                    </thead>
+                </table> 
+                <span>(기간: 30분)</span>
             </div>            
         </div>
 	</div>
-		<!--Status box-->
+		<!--Datepicker box-->
         <div class="datepicker"> <!--below headtext-->
             <div class="form-group">
                 <label>From:</label>
-                <input type="date" name="bday" max="3000-12-31" 
+                <input type="date" name="classday" max="3000-12-31" 
                        min="1000-01-01" class="form-control">
                </div>
                <div class="form-group">
                 <label>To:</label>
-                <input type="date" name="bday" min="1000-01-01"
+                <input type="date" name="classday" min="1000-01-01"
                        max="3000-12-31" class="form-control">
                </div>
 		</div>
 	</div>
-	<!--date/time selection table section-->
+	<!--date/time option table section-->
 	<section class="jumbotron instructiontxt">
 		<div class="table-responsive">
             <table class="table">
@@ -130,37 +139,124 @@
                   </tr>
                   <tr>
                     <th>시간:</th>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
-                    <td>6:00</td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:00<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
                   </tr>
                   <tr>
                     <th>시간:</th>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
-                    <td>6:30</td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
+                    <td>6:30<div class="form-check">
+                        <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1" aria-label="...">
+                      </div></td>
                   </tr>
             </table>
           </div>
 	</section>
-	<!--end of instruction section-->
+	<!--end of date/time option table section-->
 
-	<!--Calendar section: Image as placeholder only-->
-	<section class="calendar">
-		
-	</section>
+	<!--Sign-up form-->
+	<section class="sign-upform">
+		<table class="table">
+            <tr>
+                <th><div class="signup-form"> 
+                <label for="colFormLabel" class="col-sm-2 col-form-label">선택한 수강과정</label></div></th>
+                <td><div class="col-sm-9">
+                <select class="form-control">
+                <option selected>Choose...</option>
+                <option>...</option></select></div></td>
+            </tr>
+            <tr>
+                <th><div class="signup-form"> 
+                <label for="colFormLabel" class="col-sm-2 col-form-label">1. 선택한 수업일 / 시간 / 진도</label></div></th>
+                <td></td>
+                <td><div class="col-sm-9">
+                    레벨 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div>
+                    <div class="col-sm-9">
+                    진도 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div></td>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="signup-form"> 
+                <label for="colFormLabel" class="col-sm-2 col-form-label">2. 선택한 수업일 / 시간 / 진도</label></div></th>
+                <td></td>
+                <td><div class="col-sm-9">
+                    레벨 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div>
+                    <div class="col-sm-9">
+                    진도 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div></td>
+                </td>
+            </tr>
+            <tr>
+                <th><div class="signup-form"> 
+                <label for="colFormLabel" class="col-sm-2 col-form-label">3. 선택한 수업일 / 시간 / 진도</label></div></th>
+                <td></td>
+                <td><div class="col-sm-9">
+                    레벨 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div>
+                    <div class="col-sm-9">
+                    진도 :<select class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option></select></div></td>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <!--Sign-up button-->
+    <section>
+        <div class="jumbotron signupbtn"></div>
+        <a  href="#"><img src="select.png" width="150px;"></a>
+    </section>
 
-	</main>
 
 	<footer class="dr-footer">
 		GES 에이전트 | 대표 : Ryan Gilbert | 우) 44204 울산광역시 북구 천곡남로 38 (쌍용아진그린타운4차) 410-101 | T. 010-4597-1496
@@ -197,9 +293,6 @@
     };
 
     </script> -->
-
-	</body>
-
 </html>
 
 

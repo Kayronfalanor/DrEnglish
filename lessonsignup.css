@@ -6,11 +6,11 @@
     border: 1px solid #094C99;
 }
 .btnimg{
-    max-height: 160px;
-    padding: 0px 40px; 
+    max-height: 200px;
+    padding: 0px 20px; 
 }
 .headtxt span{
-    text-align: center; 
+    text-align: right; 
     font-weight: bolder; 
     color:#094C99;
 }
@@ -24,7 +24,12 @@
 .headtxt ul li::before {
     content: "\21E8";
     color: #094C99;
+    font-size: 35px;
     font-weight: bold;
     display: inline-block; 
     width: 1.5em;
-  }
+}
+.jumbotron .signupbtn{
+    display: inline-flex;
+    justify-content: space-around;
+}
