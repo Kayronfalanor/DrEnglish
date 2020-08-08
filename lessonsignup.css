@@ -1,0 +1,30 @@
+/* Custom CSS for lesson signup page */
+
+.headtext{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #094C99;
+}
+.btnimg{
+    max-height: 160px;
+    padding: 0px 40px; 
+}
+.headtxt span{
+    text-align: center; 
+    font-weight: bolder; 
+    color:#094C99;
+}
+.headtxt ul{
+    text-align: center;
+    font-size: larger;
+    color: #094C99;
+    list-style: none;
+    font-weight: bolder;
+}
+.headtxt ul li::before {
+    content: "\21E8";
+    color: #094C99;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.5em;
+  }
