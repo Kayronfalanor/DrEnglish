@@ -50,40 +50,27 @@
 main {
 	margin-bottom: 5em;
 }
-
+/*Footer*/
 .dr-footer {
 	background-color:var(--main-blue);
 	color: white;
 
 /*	position: fixed;*/ /*This is what caused the footer to be stuck to the bottom of the viewport */
-  left: 0;
-  bottom: 0 auto;
-  right: 0;
-  width: 100%;
-  clear:both;
-  padding: 5rem 1rem;
-  text-align: center;
+
 }
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { .footer-container }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { .footer-container }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { .footer-container }
+ .footer-logo {
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { .footer-container }
-
-.footer-container {
-	width: 100%;
-	padding right: 15px;
-	padding left: 15px;
-	margin-right: auto;
-	margin-left: auto;
 }
+
+.GES-copyright {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 0;
+	color: rgb(33, 50, 56);
+	padding-bottom: 0;
+}
+ 
