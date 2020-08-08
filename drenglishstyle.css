@@ -174,30 +174,43 @@ th, tr, td{
 	display: inline-block;
 
 }
+
+
+
+/*TOBY: I used these CEO msg classes:*/
 .ceo-msg-text{
-	line-height: 2rem;
+	line-height: 1.5rem;
 	text-align: justify;
 	
+}
+.ceo-msg-closing {
+    line-height: 2rem;
+    text-emphasis: justify;
+    margin-bottom: 100px;
 }
 .ceo-msg-text span{
 	font-weight: bold;
 	font-size: 1.2rem;
 
 }
+/*Up to here ^^^*/
+
+
+
 .ceo-msg-text h6{
 	margin: 1rem;
 	margin-right: 0;
 	text-align: right;
 }
 
-.ceo-msg-img img{
-	border-radius: 50%;
-	border: 1rem solid #e8e8e8;
+.ceo-msg-img{
+    width: 20%;
+    height:auto;
 	float: left;
-	margin: 3rem 5rem 3rem 3rem;
+	margin: 0px 20px 10px 0px;
 }
 
-@media ( max-width : 1390px) {
+@media ( max-width : 1000px) {
 	.ceo-msg-img img {
 		float: none;
 		display: block;
