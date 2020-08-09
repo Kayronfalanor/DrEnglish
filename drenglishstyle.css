@@ -3,7 +3,7 @@
 	border-radius: 10px 0 10px 0;
 	font-size: 14pt;
 	font-weight: bold;
-	margin-top: 25px;
+	margin-top: 5px;
 
 }
 .nav-link:hover{
@@ -17,9 +17,26 @@
   	/* height: 30px; */
 }
 
-#nav-logo {
-	margin: -10px;
+/* The fixed navbar covers content below. Use this spacer to push content down*/
+.navbar-spacer {
+    height: 50px;
 }
+.footer-spacer {
+    height:100px;
+}
+
+#nav-logo {
+	margin-top: -5px;
+    height: 40px;
+    width:auto;
+}
+
+.grey-title-box {
+    background: #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
 
 /* Profile section (Simon)  */
 
@@ -28,15 +45,15 @@
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  clear:both;
-  padding-top:20px;
-  background-color: #0047ab;
-  color: white;
-  text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    clear:both;
+    padding-top:20px;
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
 }
 
 .section {
@@ -154,11 +171,7 @@ th, tr, td{
 .ceo-msg{
 	font-family: 'Ubuntu', sans-serif;
 }
-.ceo-msg header{
-	background: url("https://cdn.pixabay.com/photo/2020/01/22/09/40/teacher-4784917_1280.jpg") no-repeat;
-	height: 70vh;
-	background-size : cover;
-}
+
 .ceo-msg-wrapper {
 	width: 70%;
 	margin: 0 auto;
@@ -174,6 +187,7 @@ th, tr, td{
 	display: inline-block;
 
 }
+
 .ceo-msg-text{
 	line-height: 2rem;
 	text-align: justify;
@@ -184,6 +198,23 @@ th, tr, td{
 	font-size: 1.2rem;
 
 }
+
+.toby-ceo-msg-text{
+	line-height: 1.5rem;
+	text-align: justify;
+	
+}
+.toby-ceo-msg-closing {
+    line-height: 2rem;
+    text-emphasis: justify;
+    margin-bottom: 100px;
+}
+.toby-ceo-msg-text span{
+	font-weight: bold;
+	font-size: 1.2rem;
+
+}
+
 .ceo-msg-text h6{
 	margin: 1rem;
 	margin-right: 0;
@@ -197,7 +228,14 @@ th, tr, td{
 	margin: 3rem 5rem 3rem 3rem;
 }
 
-@media ( max-width : 1390px) {
+.toby-ceo-msg-img{
+    width: 20%;
+    height:auto;
+	float: left;
+	margin: 0px 20px 10px 0px;
+}
+
+@media ( max-width : 1000px) {
 	.ceo-msg-img img {
 		float: none;
 		display: block;
@@ -209,4 +247,17 @@ th, tr, td{
 		flex-direction: column;
 		justify-content: center;
 	}
+}
+
+
+.faq-cell {
+    margin: 40px;
+}
+
+.faq-details-cell {
+    margin: 30px;
+}
+
+.faq-heading {
+    font-family: 'Ubuntu', sans-serif;
 }
