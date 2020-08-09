@@ -3,7 +3,7 @@
 	border-radius: 10px 0 10px 0;
 	font-size: 14pt;
 	font-weight: bold;
-	margin-top: 25px;
+	margin-top: 5px;
 
 }
 .nav-link:hover{
@@ -17,9 +17,23 @@
   	/* height: 30px; */
 }
 
+/* The fixed navbar covers content below. Use this spacer to push content down*/
+.navbar-spacer {
+    height: 50px
+}    
+
 #nav-logo {
-	margin: -10px;
+	margin-top: -5px;
+    height: 40px;
+    width:auto;
 }
+
+.grey-title-box {
+    background: #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
 
 /* Profile section (Simon)  */
 
