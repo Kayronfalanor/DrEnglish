@@ -12,10 +12,12 @@
 }
 
 .navbar-brand.nav-link:hover {
-	color: var(--main-blue);
+/*	color: var(--main-blue);*/
+	color: #0047AB;
 }
 .nav-link:hover{
-	color:var(--main-blue);
+/*	color: var(--main-blue);*/
+	color: #0047AB;
 	background-color: white;
 
 
@@ -40,7 +42,8 @@
 
 
 #dr-navbar {
-	background-color:var(--main-blue);
+/*	background-color: var(--main-blue);*/
+	background-color: #0047AB;
 }
 .dr-header {
 	letter-spacing: 5px;
@@ -53,7 +56,8 @@ main {
 
 
 .dr-footer {
-	background-color:var(--main-blue);
+/*	background-color: var(--main-blue);*/
+	background-color: #0047AB;
 	color: white;
 
 /*	position: fixed;*/ /*This is what caused the footer to be stuck to the bottom of the viewport */
