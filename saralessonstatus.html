@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<title>Dr. English</title>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<!-- Custom styles for this template -->
+	<link href="./custom.css" rel="stylesheet">
+	<link href="./carousel.css" rel="stylesheet">
+	<link href="./drenglishstyle.css" rel="stylesheet">
+	<link href="./lessonstatus.css" rel="stylesheet">
+
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+</head>
+
+<body cz-shortcut-listen="true">
+	<header>
+
+		<nav id="dr-navbar" class="fixed-top navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand nav-link" href="#">Dr. English</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<div class="nav-item active">
+					<a class="nav-link" href="#">홈 <span class="sr-only">(current)</span></a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">학습현황</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">화상영어가이드</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">자주묻는질문</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">묻고답하기</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">원격지원센터</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">회원정보수정</a>
+				</div>
+				<div class="nav-item">
+					<a class="nav-link" href="#">수강신청</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+<!--Profile display and Status-->
+	<div class="jumbotron profile-status">
+		<div class="profilenstatus">
+		<div class="profile-display"> <!--Left of screen-->
+			<img src="profile.png" alt="profile pic">
+			<div class="profiletxt">
+				<p1>Name님</p1>
+				<p2>00%</p2>
+				<p3>출석률</p3>
+			</div>
+		</div>
+		<!--Status box-->
+		<div class="status"> <!--Next to profile-display-->
+		<table>
+			<tbody>
+				<tr>
+					<td class="column">
+						<div class="schedule" onclick="openbx1()">
+							<h3>수업일정</h3>
+						</div>
+					</td>
+					<td class="column">
+						<div class="myprogress" onclick="openbx2()">
+							<h3>수업진도</h3>
+						</div>
+					</td>
+					<td class="column">
+						<div class="report" onclick="openbx3()">
+							<h3>Report</h3>
+						</div>
+					</td>
+				</tr>
+				<div class="reportbx">
+				<tr id="scheduletr"><!--Visible when schedule is clicked-->
+					<table>
+						<tr>
+							<td class="td1">수업일</td>
+							<td class="td1">수업시간/분</td>
+							<td class="td1">레벨/진도</td>
+							<td class="td1">수업참여</td>
+						</tr>
+						<tr>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                            <td class="td1">#</td>
+                        </tr>
+					</table>
+				</tr>
+				<tr id="myprogresstr"><!--Visible when progress is clicked-->
+					<table>
+						<tr>
+							<td>출결석 형황:</td>
+							<td>출석: 0 / 결석: 0 / 취소: 0</td>
+						</tr>
+						<tr>
+							<td>잔여학습기간:</td>
+							<td>0회</td>
+						</tr>
+						<tr>
+							<td>총 가의수:</td>
+							<td>0회</td>
+						</tr>
+					</table>
+				</tr>
+				<tr id="reporttr"><!--Visible when report is clicked-->
+					<!--Brief summary of Report-->
+				</tr>
+			</div>
+			</tbody>
+		</table>
+		</div>
+		</div>
+	</div>
+	<!--short instruction section-->
+	<section class="instructiontxt">
+		<div class="instruction">
+			<ul>
+				<li>수업일과 수업시간을 꼭 확인하시고, 아래 수업목록에서 <img src="./startbtn.png" alt="startbtn" class="strtbtn"> 버튼을 클릭하여 수업입장하세요.</li>
+				<li>수업일 및 시간 변경은 다음날(당일수업 16시 이전) 수업부터 가능합니다. 아래 수업목록에서 <img src="swapbtn.png" alt="swapbtn" class="swapbtn">버튼을 클릭하세요.</li>
+			</ul>
+		</div>
+	</section>
+	<!--end of instruction section-->
+
+	<!--Calendar section: Image as placeholder only-->
+	<section class="calendar">
+		<div>
+			<img src="calendar.png">
+		</div>
+	</section>
+
+	</main>
+
+	<footer class="dr-footer">
+		GES 에이전트 | 대표 : Ryan Gilbert | 우) 44204 울산광역시 북구 천곡남로 38 (쌍용아진그린타운4차) 410-101 | T. 010-4597-1496
+		<br><br>
+		Copyright ⓒ GES Agent All rights reserved.
+	</footer>
+
+
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+		<script src='./carousel.js'></script>
+		<script src='./carousel.js'></script>
+	
+	<script>
+
+	// statusbx js
+    function openbx1() {
+        document.getElementById("scheduletr").style.visibility = "visible";
+    }
+    function openbx2() {
+        document.getElementById("progresstr").style.visibility = "visible";
+    }
+    function openbx3() {
+        document.getElementById("reporttr").style.visibility = "visible";
+    }
+    </script>
+
+	</body>
+
+</html>
+
+
+
+
+	
+
+	
+	
+	
+	

@@ -1,0 +1,86 @@
+/* Custom CSS for lesson status page */
+
+.profilenstatus{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+.profile-display{
+    display: flex;
+    flex-flow: wrap;
+    background-color: #0047AB;
+    width: 300px;
+    height: 500px;
+    padding: 20px 40px;
+}
+.profile-display img{
+    display: flex;
+    border-radius: 50%;
+    border: 3px solid #0047AB;
+    width: 220px;
+    height: 220px;
+}
+.profiletxt{
+    display: block;
+    margin: 20px 65px;
+    color: white;
+    text-align: center;
+}
+.status table{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border: 1px solid #0047AB;
+    background-color: #0047AB;
+    width: 800px;
+}
+.column{
+    width: 266.66px;
+    background-color: #0047AB;
+    color: white;
+    line-height: 1.5em;
+}
+.td1{
+    width: 200px;
+}
+.status table .schedule:hover{
+    background-color: #0a3a84;
+}
+.status table .progress:hover{
+    background-color: #0a3a84;
+}
+.status table .report:hover{
+    background-color: #0a3a84;
+}
+.reportbx{
+    background-color: #d3e5f1;
+}
+#scheduletr{
+    position: absolute;
+}
+#progresstr{
+    position: absolute;
+}
+#reporttr{
+    position: absolute;
+}
+.reportbx #scheduletr{
+    visibility: hidden;
+}
+.reportbx #progresstr{
+    visibility: hidden;
+}
+.reportbx #reporttr{
+    visibility: hidden;
+}
+.strtbtn{
+    width: 100px;
+}
+.swapbtn{
+    width: 60px;
+}
+.calendar img{
+    width: 80%;
+    margin: auto;
+}
+
