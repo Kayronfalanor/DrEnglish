@@ -53,9 +53,31 @@
 main {
 	margin-bottom: 5em;
 }
+/*Footer*/
 
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { .container }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { .container }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { .container }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+	.container }
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+
+.container {
+	display: flexbox;
+	width: 100%;
+}
 
 .dr-footer {
+<<<<<<< HEAD
 /*	background-color: var(--main-blue);*/
 	background-color: #0047AB;
 	color: white;
@@ -69,3 +91,55 @@ main {
     float: left;
 }
 
+=======
+	background: none;
+	color: white;
+	display: flexbox;
+	position: relative;
+	z-index: 0;
+	padding-bottom: 0;
+	margin: 0;
+
+
+/*	position: fixed;*/ /*This is what caused the footer to be stuck to the bottom of the viewport */
+
+}
+
+.footer-top {
+	margin: 1em;
+}
+
+.row {
+	display: flexbox;
+	flex-wrap: wrap;
+
+
+}
+
+.footer-logo {
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+
+
+.GES-copyright {
+	text-align: center;
+	padding-top: 300px;
+	padding-bottom: 0;
+	color: rgb(33, 50, 56);
+
+	margin: 1em;
+	position: relative;
+}
+ 
+.backstretch {
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	height: ;
+
+
+}
+>>>>>>> jamesking
