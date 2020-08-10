@@ -262,3 +262,7 @@ th, tr, td{
 .faq-heading {
     font-family: 'Ubuntu', sans-serif;
 }
+
+.img-container {
+        text-align: center;
+      }
