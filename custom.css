@@ -54,23 +54,37 @@ main {
 .dr-footer {
 	background-color:var(--main-blue);
 	color: white;
+	display: flexbox;
+	
 
 /*	position: fixed;*/ /*This is what caused the footer to be stuck to the bottom of the viewport */
 
 }
-
-
-
-
- .footer-logo {
-
+@media (max-width: 991px) and (min-width: 768px){.footer-top
 }
+
+.footer-top {
+	margin: 1em;
+}
+
+.row {
+	display: flexbox;
+	flex-wrap: wrap;
+	display: -webkit-box;
+}
+
+.footer-logo {
+	margin-top: 15px;
+	padding-bottom: 5px;
+}
+
 
 .GES-copyright {
 	text-align: center;
-	padding-top: 5px;
+	padding-top: 0;
 	padding-bottom: 0;
 	color: rgb(33, 50, 56);
 	padding-bottom: 0;
+	margin: 1em;
 }
  
