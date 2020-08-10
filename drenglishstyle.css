@@ -22,7 +22,7 @@
     height: 50px;
 }
 .footer-spacer {
-    height:100px;
+    height: 100px;
 }
 
 #nav-logo {
@@ -35,6 +35,7 @@
     background: #eee;
     padding: 15px;
     margin-bottom: 20px;
+    height: 250px;
 }
 
 
@@ -261,4 +262,3 @@ th, tr, td{
 .faq-heading {
     font-family: 'Ubuntu', sans-serif;
 }
-
